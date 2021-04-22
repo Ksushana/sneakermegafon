@@ -51,21 +51,23 @@ html( lang="ru" )
           h3.request__title Оставь заявку
           form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse")
             label(for="surname") Фамилия
-            input(type="text" id="surname")
+            input(type="text" id="surname" name="entry.816898874")
             label(for="name") Имя
-            input(type="text" id="name")
+            input(type="text" id="name" name="entry.884712139")
             label(for="phone") Телефон
-            input(type="text" id="phone")
+            input(type="text" id="phone" name="entry.2015515466")
             label(for="size") Размер
-            input(type="text" id="size")
+            input(type="text" id="size" name="entry.1235063670")
             label(for="link") Ссылка на социальную сеть
-            input(type="text" id="link")
+            input(type="text" id="link" name="entry.466567166")
             .request__checkbox
-              input(type="checkbox" id="agreement")
+              input(type="checkbox" id="agreement" name="entry.17703706")
               label(for="agreement") Оставляя заявку, я подписываю пользовательское соглашение и принимаю условия конфеденциальности
             .request__checkbox
-              input(type="checkbox" id="order")
+              input(type="checkbox" id="order" name="entry.1608148304")
               label(for="order") Оставляя заявку, я соглашаюсь с условиями розыгрыша
+            button.request__button( type="submit" )
+              +svg("button-text", "320", "20")
         .request__snake
           +svg("snake-left", "231", "60")
       section.phone
