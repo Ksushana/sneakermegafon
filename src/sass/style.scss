@@ -1,0 +1,16 @@
+/* Vendor */
+@import "vendor/normalize";
+/* General */
+@import "general/variables";
+@import "general/mixins";
+@import "general/fonts";
+@import "general/global";
+/* Blocks */
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/hero";
+@import "blocks/timeout";
+@import "blocks/phone";
+@import "blocks/game";
+@import "blocks/request";
+@import "blocks/videos";

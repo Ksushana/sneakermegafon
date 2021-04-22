@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/MenoeGrotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__svg header__svg--sneaker"><svg width="370" height="50" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#sneaker"></use>
+        </svg></div>
+      <div class="header__svg header__svg--x"><svg width="31" height="29" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#cross"></use>
+        </svg></div>
+      <div class="header__svg"><svg width="443" height="80" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#megafon"></use>
+        </svg></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__img">
+        <picture>
+          <source media="(min-width: 767px)" srcset="img/boot.png"><img src="img/sneaker-mob.png" alt="">
+        </picture><span>25 апреля 2021</span>
+      </div>
+      <div class="hero__text">Совсем скоро вы узнаете как получить эксклюзивный дроп, и&nbsp;мы уверенны что ты сможешь заполучить его, потому что ты вместе с Мегафоном обладаешь самым быстрым интернетом в России.</div>
+      <div class="hero__snake"><svg width="289" height="60" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake"></use>
+        </svg></div>
+    </section>
+    <section class="timeout">
+      <h2 class="timeout__title">Сбор заявок через</h2>
+      <div class="timeout__timer" data-time="May 5, 2021 10:37:25">
+        <div class="timeout__block">
+          <div class="timeout__number" id="hours">03</div>
+          <div class="timeout__span">Часов</div>
+        </div><span class="timeout__dots">:</span>
+        <div class="timeout__block">
+          <div class="timeout__number" id="min">38</div>
+          <div class="timeout__span">Минут</div>
+        </div><span class="timeout__dots">:</span>
+        <div class="timeout__block">
+          <div class="timeout__number" id="sec">47</div>
+          <div class="timeout__span">Секунд</div>
+        </div>
+      </div>
+    </section>
+    <section class="request">
+      <div class="request__form">
+        <h3 class="request__title">Оставь заявку</h3>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse"><label for="surname">Фамилия</label><input type="text" id="surname"><label for="name">Имя</label><input type="text" id="name"><label for="phone">Телефон</label><input type="text" id="phone"><label for="size">Размер</label><input type="text" id="size"><label for="link">Ссылка на социальную сеть</label><input type="text" id="link">
+          <div class="request__checkbox"><input type="checkbox" id="agreement"><label for="agreement">Оставляя заявку, я подписываю пользовательское соглашение и принимаю условия конфеденциальности</label></div>
+          <div class="request__checkbox"><input type="checkbox" id="order"><label for="order">Оставляя заявку, я соглашаюсь с условиями розыгрыша</label></div>
+        </form>
+      </div>
+      <div class="request__snake"><svg width="231" height="60" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake-left"></use>
+        </svg></div>
+    </section>
+    <section class="phone">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/phone.png"><img src="img/phone-mob.png" alt="">
+      </picture>
+      <p class="phone__text">Это наш телефончик, на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки</p>
+      <p class="phone__text phone__text--note">Ожидай смс и мы пришлем тебе информацию.<br> И ты сможешь быть первым, потому что ты с мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.</p>
+    </section>
+    <section class="game"><iframe src="https://dev-megafon-snake.mdv.pw" style="width: 100%; height: 100%" frameborder="0"></iframe></section>
+    <section class="videos">
+      <p class="videos__intro">Заголовок про видосы. Здесь мы публикуем видео, в которых очень хорошо видно какие крутые получились кроссовки</p>
+      <ul class="videos__list">
+        <li class="videos__item" style="background-image: url(./../img/video2.jpg"><a href=""></a></li>
+        <li class="videos__item" style="background-image: url(./../img/video1.jpg"><a href=""></a></li>
+        <li class="videos__item" style="background-image: url(./../img/video3.jpg"><a href=""></a></li>
+        <li class="videos__item videos__item--soon">
+          <div class="videos__dots"></div>
+          <div class="videos__note">SOON</div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer"></footer>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
