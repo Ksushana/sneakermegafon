@@ -1,0 +1,84 @@
+.timeout {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 161px;
+
+  @include mobile {
+    margin-bottom: 65px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 140px;
+    line-height: 102.3%;
+    text-align: center;
+    max-width: 924px;
+    margin: 0 auto;
+
+    @include laptop {
+      font-size: 110px;
+    }
+
+    @include tablet {
+      font-size: 80px;
+      max-width: 550px;
+    }
+
+    @include mobile {
+      font-size: 38px;
+      line-height: 102.3%;
+    }
+  }
+
+  &__timer {
+    display: flex;
+    font-weight: 500;
+    font-size: 140px;
+    line-height: 102.3%;
+    margin: 20px auto ;
+
+    @include laptop {
+      font-size: 110px;
+    }
+
+    @include tablet {
+      font-size: 80px;
+    }
+
+    @include mobile {
+      font-size: 38px;
+      line-height: 102.3%;
+      margin: 25px auto ;
+    }
+  }
+
+  &__span {
+    font-size: 32px;
+    line-height: 32px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 102.3%;
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__dots {
+    display: inline-block;
+    margin: 0 36px;
+
+    @include mobile {
+      margin: 0 12px;
+    }
+  }
+
+  &__number {
+    margin-bottom: 20px;
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+}

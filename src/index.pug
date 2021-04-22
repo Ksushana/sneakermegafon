@@ -1,0 +1,94 @@
+include pug/mixins
+
+block variables
+
+doctype html
+html( lang="ru" )
+  head
+    meta( charset="UTF-8" )
+    title #{mainTitle} !{title && "| " + title}
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    link( rel="preload" href="fonts/MenoeGrotesque.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="stylesheet" href="css/style.min.css" )
+
+  body
+    header.header
+      .header__inner
+        .header__svg.header__svg--sneaker
+          +svg("sneaker", "370", "50")
+        .header__svg.header__svg--x
+          +svg("cross", "31", "29")
+        .header__svg
+          +svg("megafon", "443", "80")
+
+    main
+      section.hero
+        .hero__img
+          picture
+            source( media="(min-width: 767px)" srcset="img/boot.png" )
+            img(src="img/sneaker-mob.png", alt="")
+          span 25 апреля 2021
+        .hero__text
+         | Совсем скоро вы узнаете как получить эксклюзивный дроп, и&nbsp;мы уверенны что ты сможешь заполучить его, потому что ты вместе с Мегафоном обладаешь самым быстрым интернетом в России.
+        .hero__snake
+          +svg("snake", "289", "60")
+      section.timeout
+        h2.timeout__title Сбор заявок через
+        .timeout__timer(data-time="May 5, 2021 10:37:25")
+          .timeout__block
+           .timeout__number(id="hours") 03
+           .timeout__span Часов
+          span.timeout__dots :
+          .timeout__block
+           .timeout__number(id="min") 38
+           .timeout__span Минут
+          span.timeout__dots :
+          .timeout__block
+           .timeout__number(id="sec") 47
+           .timeout__span Секунд
+      section.request
+        .request__form
+          h3.request__title Оставь заявку
+          form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse")
+            label(for="surname") Фамилия
+            input(type="text" id="surname")
+            label(for="name") Имя
+            input(type="text" id="name")
+            label(for="phone") Телефон
+            input(type="text" id="phone")
+            label(for="size") Размер
+            input(type="text" id="size")
+            label(for="link") Ссылка на социальную сеть
+            input(type="text" id="link")
+            .request__checkbox
+              input(type="checkbox" id="agreement")
+              label(for="agreement") Оставляя заявку, я подписываю пользовательское соглашение и принимаю условия конфеденциальности
+            .request__checkbox
+              input(type="checkbox" id="order")
+              label(for="order") Оставляя заявку, я соглашаюсь с условиями розыгрыша
+        .request__snake
+          +svg("snake-left", "231", "60")
+      section.phone
+        picture
+          source( media="(min-width: 768px)" srcset="img/phone.png" )
+          img(src="img/phone-mob.png", alt="")
+        p.phone__text Это наш телефончик, на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки
+        p.phone__text.phone__text--note Ожидай смс и мы пришлем тебе информацию.<br> И ты сможешь быть первым, потому что ты с мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.
+      section.game
+        iframe(src="https://dev-megafon-snake.mdv.pw" style="width: 100%; height: 100%" frameborder="0")
+      section.videos
+        p.videos__intro Заголовок про видосы. Здесь мы публикуем видео,  в которых очень хорошо видно какие крутые получились кроссовки
+        ul.videos__list
+          li.videos__item( style="background-image: url(./../img/video2.jpg")
+            a(href="")
+          li.videos__item( style="background-image: url(./../img/video1.jpg")
+            a(href="")
+          li.videos__item( style="background-image: url(./../img/video3.jpg")
+            a(href="")
+          li.videos__item.videos__item--soon
+            .videos__dots
+            .videos__note SOON
+    footer.footer
+
+    block scripts
+      script( src="js/script.min.js" )
