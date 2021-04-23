@@ -1,0 +1,52 @@
+include pug/mixins
+
+block variables
+
+doctype html
+html( lang="ru" )
+  head
+    meta( charset="UTF-8" )
+    title #{mainTitle} !{title && "| " + title}
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    link( rel="preload" href="fonts/MenoeGrotesque.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="stylesheet" href="css/style.min.css" )
+
+  body
+    header.header
+      .header__snake
+        +svg("snake-header", "60", "261")
+      .header__inner
+        .header__svg.header__svg--sneaker
+          +svg("sneaker", "370", "50")
+        .header__svg.header__svg--x
+          +svg("cross", "31", "29")
+        .header__svg
+          +svg("megafon", "443", "80")
+
+    main
+      section.activate
+        .activate__inner
+          .activate__title — Привет, поздравляем, ты выиграл эксклюзивный пак Sneakerhead х MegaFon!
+          .activate__note Мы сделали для тебя этот сникерфон, потому что ты хочешь первым получать сообщения об эксклюзивных дропах и акциях от Sneakerhead. Но для начала тебе нужно активировать сим-карту, которая уже вставлена в твой сникерфон.
+          .activate__title Инструкция по активации
+          ol.activate__list
+            li.activate__item Вставь новую сим-карту в основной слот своего смартфона.
+            li.activate__item Скачай приложение «МегаФон» (6+) из любого магазина приложений или наведи камеру смартфона на QR-код с&nbsp;упаковки и перейди по ссылке.
+            li.activate__item Запусти приложение и активируй свой текущий номер.
+            li.activate__item Выбери тариф. Самый выгодный для тебя #Без переплат. Всё&nbsp;(в&nbsp;Москве) или #Без переплат. Интернет  (в&nbsp;Санкт&#8209;Петербурге) с безлимитным интернетом.
+            li.activate__item Введи личные данные и подпиши электронный договор.
+            li.activate__item Готово, все получилось! Теперь вставь активированную сим-карту в свой сникерфон.
+            li.activate__item В Меню сникерфона ты найдешь WhatsApp, там тебя уже ждёт первое сообщение от Sneakerhead. J Теперь с безлимитом от МегаФона ты будешь первым/ой получать сообщения о наших эксклюзивных дропах и акциях.
+
+      section.moto
+        .moto__inner
+          .moto__item
+            | Баланс сим карты — 100 рублей, а свой новый номер можно узнать по команде *205#. <br>Запрос бесплатный.
+          .moto__note Спасибо, что ты с нами
+        .moto__snake
+          +svg("snake", "289", "60")
+
+    footer.footer
+
+    block scripts
+      script( src="js/script.min.js" )

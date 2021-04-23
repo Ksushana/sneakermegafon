@@ -65,4 +65,10 @@
       }
     }
   }
+
+  &__snake {
+    position: absolute;
+    top: 0;
+    left: 80px;
+  }
 }

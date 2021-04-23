@@ -1,0 +1,40 @@
+.activate {
+  max-width: 1280px;
+  padding: 130px 30px 67px;
+  margin: 0 auto;
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__note {
+    font-size: 24px;
+    line-height: 102.3%;
+    color: rgba(17, 17, 17, 0.75);
+    margin-bottom: 98px;
+  }
+
+  &__inner {
+    max-width: 952px;
+  }
+
+  &__list {
+    counter-reset: item;
+    list-style-type: none;
+
+  }
+  &__item {
+    counter-increment: customlistcounter;
+    position: relative;
+    font-size: 24px;
+    line-height: 102.3%;
+    color: rgba(17, 17, 17, 0.75);
+    padding-left: 70px;
+    padding-bottom: 48px;
+    &:before {
+      content: counter(customlistcounter) " ";
+      position: absolute;
+      left: -10px;
+    }
+  }
+}
