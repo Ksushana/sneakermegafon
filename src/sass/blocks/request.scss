@@ -2,10 +2,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 325px;
+  // padding-bottom: 325px;
 
   @include mobile {
-    padding-bottom: 410px;
+    // padding-bottom: 410px;
   }
 
   &__form {
@@ -15,7 +15,7 @@
     box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
     padding: 40px;
     width: 1058px;
-    margin: 0 auto;
+    margin: 0 auto 345px;
     z-index: 100;
 
     @include tablet {
@@ -26,6 +26,7 @@
       font-size: 32px;
       line-height: 102.3%;
       padding: 40px 6px;
+      margin: 0 auto 413px;
     }
 
     form {
@@ -78,7 +79,7 @@
     background-position: top;
     position: absolute;
     background-color: #53B561;
-    margin-top: 396px;
+    bottom: 0;
 
     &::after {
       position: absolute;
@@ -107,8 +108,8 @@
     }
 
     @include mobile {
-      height: 780px;
-      margin-top: 366px;
+      // height: 780px;
+      // margin-top: 366px;
 
       svg {
         left: -73px;

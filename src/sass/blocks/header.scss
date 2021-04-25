@@ -1,15 +1,17 @@
 .header {
   display: flex;
-  padding-top: 113px;
+  padding-top: 50px;
   padding-bottom: 6px;
+  z-index: 100;
+  position: relative;
 
   @include mobile {
     padding-top: 50px;
   }
   &__inner {
     display: grid;
-    grid-template-columns: 442px 31px 442px;
-    grid-column-gap: 42px;
+    grid-template-columns: 385px 31px 385px;
+    grid-column-gap: 25px;
     margin: 0 auto;
 
     @include tablet {

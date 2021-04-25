@@ -1,35 +1,95 @@
 .hero {
   display: flex;
   flex-direction: column;
-  background-image: url("./../img/mega-dots.svg");
-  background-repeat: no-repeat;
-  background-position: left 129px;
   min-height: 605px;
   font-weight: 500;
   line-height: 102.3%;
+  position: relative;
+  overflow-x: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 430px;
+    height: 430px;
+    background: #00B956;
+    border-radius: 50%;
+    filter: blur(90px);
+    right: -215px;
+    top: 190px;
+
+    @include tablet {
+      width: 330px;
+      height: 330px;
+    }
+
+    @include mobile {
+      width: 119px;
+      height: 119px;
+      right: -60px;
+      top: 360px;
+      filter: blur(40px);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 430px;
+    height: 430px;
+    background: #731982;
+    border-radius: 50%;
+    filter: blur(90px);
+    left: -215px;
+    top: 190px;
+    z-index: 10000;
+
+    @include tablet {
+      width: 330px;
+      height: 330px;
+
+    }
+
+    @include mobile {
+      width: 119px;
+      height: 119px;
+      top: 360px;
+      left: -60px;
+      filter: blur(40px);
+    }
+  }
 
   @include laptop {
-    background-size: 40%;
+    // background-size: 40%;
   }
 
   @include mobile {
-    background-size: 323px;
-    background-position: -120px 75px;
+    // background-size: 323px;
+    // background-position: -120px 75px;
   }
 
   &__img {
     margin: 0 auto;
-    width: 1075px;
-    height: 605px;
+    width: 752px;
+    height: 762px;
+    transform: translateY(-45px);
     position: relative;
+
+    @include laptop {
+      width: 652px;
+      height: 662px;
+      transform: translateY(0);
+      margin-bottom: 45px;
+    }
+
     @include tablet {
-      width: 100%;
+      width: 552px;
+      height: 562px;
     }
 
     @include mobile {
-      width: 300px;
-      height: 221px;
-      margin-top: 85px;
+      width: 320px;
+      height: 415px;
     }
 
     img {
@@ -42,10 +102,16 @@
 
     span {
       position: absolute;
-      color: $color-black;
+      color: $color-purple;
       width: 173px;
-      right: 23px;
-      top: 123px;
+      right: -124px;
+      top: 243px;
+
+      @include tablet {
+        right: -100px;
+        top: 80px;
+        font-size: 24px;
+      }
 
       @include mobile {
         position: static;
@@ -53,7 +119,7 @@
         line-height: 102.3%;
         width: 44%;
         display: block;
-        margin-top: 10px;
+        margin-top: 25px;
         margin-left: auto;
       }
     }
@@ -72,13 +138,13 @@
   }
 
   &__text {
-    margin: -55px auto 0;;
+    margin: -42px auto 0;;
     text-align: center;
     max-width: 963px;
     padding: 0 30px;
 
     @include mobile {
-      margin: 94px auto 0;
+      margin: 80px auto 0;
       text-align: left;
       max-width: 100%;
       padding: 0 20px;
@@ -88,21 +154,22 @@
   }
 
   &__snake {
-    min-height: 252px;
+    min-height: 60px;
     display: flex;
-    justify-content: flex-end;
-    padding-top: 121px;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 60px;
     box-sizing: border-box;
     overflow: hidden;
 
-
     @include mobile {
-      padding-top: 30px;
-      min-height: 155px;
-    }
 
-    svg {
-      margin-right: -90px;
+      svg {
+        width: 260px;
+        height: 45px;
+      }
+      padding-top: 60px;
+      padding-bottom: 80px;
     }
   }
 }

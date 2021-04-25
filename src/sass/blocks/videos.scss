@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   padding-top: 122px;
-  padding-bottom: 188px;
+  // padding-bottom: 188px;
 
   @include mobile {
-    padding-top: 92px;
+    padding-top: 70px;
     padding-bottom: 106px;
   }
 
   &__intro {
-    margin: 0 auto 106px;
+    margin: 0 auto 138px;
     text-align: center;
     max-width: 954px;
     padding: 0 50px;
@@ -19,7 +19,7 @@
       text-align: left;
       max-width: 100%;
       padding: 0 20px;
-      margin-bottom: 32px;
+      margin-bottom: 48px;
     }
   }
 
@@ -27,16 +27,14 @@
     @include list-reset;
     max-width: 1280px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
 
     @include laptop {
-      grid-template-columns: repeat(3, 1fr);
     }
 
     @include tablet {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     @include mobile {
@@ -56,6 +54,7 @@
     background-position: center;
     background-size: 101%;
     position: relative;
+    background-color: $color-white;
 
     @include mobile {
       width: 280px;
@@ -89,7 +88,7 @@
       align-items: center;
       justify-content: center;
       &::after {
-        display: none;
+        // display: none;
       }
     }
   }
@@ -128,5 +127,8 @@
     line-height: 102.3%;
     letter-spacing: 0.1em;
     color: rgba(17, 17, 17, 0.75);
+    position: absolute;
+    z-index: 20;
+    bottom: 48px;
   }
 }

@@ -15,23 +15,23 @@ html( lang="ru" )
     header.header
       .header__inner
         .header__svg.header__svg--sneaker
-          +svg("sneaker", "370", "50")
+          +svg("sneaker", "321", "43")
         .header__svg.header__svg--x
-          +svg("cross", "31", "29")
+          +svg("cross", "29", "31")
         .header__svg
-          +svg("megafon", "443", "80")
+          +svg("megafon", "385", "70")
 
     main
       section.hero
         .hero__img
           picture
-            source( media="(min-width: 767px)" srcset="img/boot.png" )
-            img(src="img/sneaker-mob.png", alt="")
+            source( media="(min-width: 767px)" srcset="img/hero@1x.png 1x, img/hero@2x.png 2x" )
+            img(src="img/hero-mob@1x.png", srcset="img/hero-mob@2x.png 2x" alt="")
           span 25 апреля 2021
         .hero__text
          | Совсем скоро вы узнаете как получить эксклюзивный дроп, и&nbsp;мы уверенны что ты сможешь заполучить его, потому что ты вместе с Мегафоном обладаешь самым быстрым интернетом в России.
         .hero__snake
-          +svg("snake", "289", "60")
+          +svg("full-snake", "341", "60")
       section.timeout
         h2.timeout__title Сбор заявок через
         .timeout__timer(data-time="May 5, 2021 10:37:25")
@@ -54,12 +54,17 @@ html( lang="ru" )
             input(type="text" id="surname" name="entry.816898874")
             label(for="name") Имя
             input(type="text" id="name" name="entry.884712139")
-            label(for="phone") Телефон
-            input(type="text" id="phone" name="entry.2015515466")
-            label(for="size") Размер
-            input(type="text" id="size" name="entry.1235063670")
+            label(for="date") Дата рождения
+            input(type="date" id="date" name="entry.884712139")
             label(for="link") Ссылка на социальную сеть
             input(type="text" id="link" name="entry.466567166")
+            label(for="phone") Телефон
+            input(type="text" id="phone" name="entry.2015515466")
+            label(for="email") Email
+            input(type="text" id="email" name="entry.466567166")
+            label(for="size") Размер
+            input(type="text" id="size" name="entry.1235063670")
+
             .request__checkbox
               input(type="checkbox" id="agreement" name="entry.17703706")
               label(for="agreement") <a href="megafon.sneakerhead.ru/terms">Оставляя заявку, я подписываю пользовательское соглашение и принимаю условия конфеденциальности</a>
@@ -79,16 +84,15 @@ html( lang="ru" )
       section.game
         iframe(src="https://dev-megafon-snake.mdv.pw" style="width: 100%; height: 100%" frameborder="0")
       section.videos
-        p.videos__intro Заголовок про видосы. Здесь мы публикуем видео, в которых очень хорошо видно какие крутые получились кроссовки
+        p.videos__intro Тебе наверняка не терпится узнать что нибудь о нашей коллаборации? Мы&nbsp;рассказываем!
         ul.videos__list
-          li.videos__item( style="background-image: url(./img/video2.jpg)")
-            a(href="")
-          li.videos__item( style="background-image: url(./img/video1.jpg)")
-            a(href="")
-          li.videos__item( style="background-image: url(./img/video3.jpg)")
-            a(href="")
+          //- li.videos__item( style="background-image: url(./img/video2.jpg)")
+          //-   a(href="")
+          //- li.videos__item( style="background-image: url(./img/video1.jpg)")
+          //-   a(href="")
+          //- li.videos__item( style="background-image: url(./img/video3.jpg)")
+          //-   a(href="")
           li.videos__item.videos__item--soon
-            .videos__dots
             .videos__note SOON
     footer.footer
 

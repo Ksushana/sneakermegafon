@@ -418,8 +418,10 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 113px;
+  padding-top: 50px;
   padding-bottom: 6px;
+  z-index: 100;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -430,8 +432,8 @@ a:hover {
 
 .header__inner {
   display: grid;
-  grid-template-columns: 442px 31px 442px;
-  grid-column-gap: 42px;
+  grid-template-columns: 385px 31px 385px;
+  grid-column-gap: 25px;
   margin: 0 auto;
 }
 
@@ -516,11 +518,13 @@ a:hover {
 .footer {
   min-height: 202px;
   background-color: #00B956;
+  margin-top: -100px;
 }
 
 @media (max-width: 767px) {
   .footer {
     min-height: 217px;
+    margin-top: 0;
   }
 }
 
@@ -532,45 +536,106 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("./../img/mega-dots.svg");
-  background-repeat: no-repeat;
-  background-position: left 129px;
   min-height: 605px;
   font-weight: 500;
   line-height: 102.3%;
+  position: relative;
+  overflow-x: hidden;
 }
 
-@media (max-width: 1439px) {
-  .hero {
-    background-size: 40%;
+.hero::after {
+  position: absolute;
+  content: "";
+  width: 430px;
+  height: 430px;
+  background: #00B956;
+  border-radius: 50%;
+  -webkit-filter: blur(90px);
+          filter: blur(90px);
+  right: -215px;
+  top: 190px;
+}
+
+@media (max-width: 1127px) {
+  .hero::after {
+    width: 330px;
+    height: 330px;
   }
 }
 
 @media (max-width: 767px) {
-  .hero {
-    background-size: 323px;
-    background-position: -120px 75px;
+  .hero::after {
+    width: 119px;
+    height: 119px;
+    right: -60px;
+    top: 360px;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+  }
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  width: 430px;
+  height: 430px;
+  background: #731982;
+  border-radius: 50%;
+  -webkit-filter: blur(90px);
+          filter: blur(90px);
+  left: -215px;
+  top: 190px;
+  z-index: 10000;
+}
+
+@media (max-width: 1127px) {
+  .hero::before {
+    width: 330px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero::before {
+    width: 119px;
+    height: 119px;
+    top: 360px;
+    left: -60px;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
   }
 }
 
 .hero__img {
   margin: 0 auto;
-  width: 1075px;
-  height: 605px;
+  width: 752px;
+  height: 762px;
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
   position: relative;
+}
+
+@media (max-width: 1439px) {
+  .hero__img {
+    width: 652px;
+    height: 662px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    margin-bottom: 45px;
+  }
 }
 
 @media (max-width: 1127px) {
   .hero__img {
-    width: 100%;
+    width: 552px;
+    height: 562px;
   }
 }
 
 @media (max-width: 767px) {
   .hero__img {
-    width: 300px;
-    height: 221px;
-    margin-top: 85px;
+    width: 320px;
+    height: 415px;
   }
 }
 
@@ -583,10 +648,18 @@ a:hover {
 
 .hero__img span {
   position: absolute;
-  color: #000000;
+  color: #731982;
   width: 173px;
-  right: 23px;
-  top: 123px;
+  right: -124px;
+  top: 243px;
+}
+
+@media (max-width: 1127px) {
+  .hero__img span {
+    right: -100px;
+    top: 80px;
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -596,7 +669,7 @@ a:hover {
     line-height: 102.3%;
     width: 44%;
     display: block;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-left: auto;
   }
 }
@@ -615,7 +688,7 @@ a:hover {
 }
 
 .hero__text {
-  margin: -55px auto 0;
+  margin: -42px auto 0;
   text-align: center;
   max-width: 963px;
   padding: 0 30px;
@@ -623,7 +696,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero__text {
-    margin: 94px auto 0;
+    margin: 80px auto 0;
     text-align: left;
     max-width: 100%;
     padding: 0 20px;
@@ -633,14 +706,15 @@ a:hover {
 }
 
 .hero__snake {
-  min-height: 252px;
+  min-height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 121px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 90px;
+  padding-bottom: 60px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
@@ -648,13 +722,13 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero__snake {
-    padding-top: 30px;
-    min-height: 155px;
+    padding-top: 60px;
+    padding-bottom: 80px;
   }
-}
-
-.hero__snake svg {
-  margin-right: -90px;
+  .hero__snake svg {
+    width: 260px;
+    height: 45px;
+  }
 }
 
 .timeout {
@@ -670,7 +744,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .timeout {
-    margin-bottom: 65px;
+    margin-bottom: 75px;
   }
 }
 
@@ -788,8 +862,37 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 142px;
-  margin-top: -278px;
+  margin-top: -337px;
   position: relative;
+}
+
+.phone::after {
+  position: absolute;
+  content: "";
+  width: 269px;
+  height: 269px;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -135px;
+  top: 380px;
+  background: #00B956;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+
+@media (max-width: 1439px) {
+  .phone::after {
+    top: 250px;
+    width: 240px;
+    height: 240px;
+    margin-left: -120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .phone::after {
+    display: none;
+  }
 }
 
 @media (max-width: 1439px) {
@@ -800,8 +903,8 @@ a:hover {
 
 @media (max-width: 767px) {
   .phone {
-    margin-top: -220px;
-    padding-bottom: 68px;
+    margin-top: -240px;
+    padding-bottom: 50px;
   }
 }
 
@@ -837,8 +940,9 @@ a:hover {
 
 .phone picture {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 100%;
+  z-index: 100;
 }
 
 .phone picture img {
@@ -850,6 +954,7 @@ a:hover {
   .phone picture {
     width: 219px;
     height: 522px;
+    margin-bottom: 10px;
   }
 }
 
@@ -889,13 +994,6 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 325px;
-}
-
-@media (max-width: 767px) {
-  .request {
-    padding-bottom: 410px;
-  }
 }
 
 .request__form {
@@ -907,7 +1005,7 @@ a:hover {
           box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
   padding: 40px;
   width: 1058px;
-  margin: 0 auto;
+  margin: 0 auto 345px;
   z-index: 100;
 }
 
@@ -922,6 +1020,7 @@ a:hover {
     font-size: 32px;
     line-height: 102.3%;
     padding: 40px 6px;
+    margin: 0 auto 413px;
   }
 }
 
@@ -985,7 +1084,7 @@ a:hover {
   background-position: top;
   position: absolute;
   background-color: #53B561;
-  margin-top: 396px;
+  bottom: 0;
 }
 
 .request__snake::after {
@@ -1020,10 +1119,6 @@ a:hover {
 }
 
 @media (max-width: 767px) {
-  .request__snake {
-    height: 780px;
-    margin-top: 366px;
-  }
   .request__snake svg {
     left: -73px;
     bottom: 242px;
@@ -1124,18 +1219,17 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 122px;
-  padding-bottom: 188px;
 }
 
 @media (max-width: 767px) {
   .videos {
-    padding-top: 92px;
+    padding-top: 70px;
     padding-bottom: 106px;
   }
 }
 
 .videos__intro {
-  margin: 0 auto 106px;
+  margin: 0 auto 138px;
   text-align: center;
   max-width: 954px;
   padding: 0 50px;
@@ -1146,7 +1240,7 @@ a:hover {
     text-align: left;
     max-width: 100%;
     padding: 0 20px;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
   }
 }
 
@@ -1156,21 +1250,12 @@ a:hover {
   list-style: none;
   max-width: 1280px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
-}
-
-@media (max-width: 1439px) {
-  .videos__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 1127px) {
-  .videos__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
 }
 
 @media (max-width: 767px) {
@@ -1198,6 +1283,7 @@ a:hover {
   background-position: center;
   background-size: 101%;
   position: relative;
+  background-color: #ffffff;
 }
 
 @media (max-width: 767px) {
@@ -1245,10 +1331,6 @@ a:hover {
           justify-content: center;
 }
 
-.videos__item--soon::after {
-  display: none;
-}
-
 .videos__dots {
   margin-top: 50px;
   width: 25px;
@@ -1284,6 +1366,9 @@ a:hover {
   line-height: 102.3%;
   letter-spacing: 0.1em;
   color: rgba(17, 17, 17, 0.75);
+  position: absolute;
+  z-index: 20;
+  bottom: 48px;
 }
 
 .activate {
