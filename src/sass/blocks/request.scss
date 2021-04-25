@@ -51,6 +51,7 @@
         line-height: 32px;
         background-color: $color-white;
         width: 100%;
+        border-radius: 0;
 
         @include mobile {
           height: 23px;
@@ -118,6 +119,10 @@
 
   &__checkbox {
     display: flex;
+
+    a {
+      text-decoration: underline;
+    }
 
     &:not(:first-of-type)  label {
       margin-top: 0;
