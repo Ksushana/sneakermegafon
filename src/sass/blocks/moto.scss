@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   &__inner {
-    max-width: 1280px;
+    max-width: 1060px;
     padding: 0 30px;
     margin: 0 auto;
     display: flex;
@@ -23,6 +23,18 @@
     margin-right: 180px;
     margin-bottom: 76px;
     margin-left: auto;
+
+    @include mobile {
+      width: 260px;
+      font-size: 16px;
+      line-height: 102.3%;
+      padding: 30px 34px;
+      margin: 0 auto 70px;
+    }
+
+    span {
+      color: $color-purple;
+    }
   }
 
   &__snake {
@@ -30,9 +42,20 @@
     right: -60px;
     top: 100px;
 
+    @include tablet {
+      display: none;
+    }
+
   }
 
   &__note {
-margin-bottom: 105px;
+    margin-bottom: 105px;
+
+    @include mobile {
+      font-size: 26px;
+    line-height: 102.3%;
+    text-align: center;
+    margin-bottom: 90px;
+    }
   }
 }

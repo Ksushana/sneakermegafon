@@ -34,7 +34,7 @@ html( lang="ru" )
           +svg("full-snake", "341", "60")
       section.timeout
         h2.timeout__title Сбор заявок через
-        .timeout__timer(data-time="May 5, 2021 10:37:25")
+        .timeout__timer(data-time="April 26, 2021 12:00:00")
           .timeout__block
            .timeout__number(id="hours") 03
            .timeout__span Часов
@@ -51,25 +51,42 @@ html( lang="ru" )
           h3.request__title Оставь заявку
           form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse")
             label(for="surname") Фамилия
-            input(type="text" id="surname" name="entry.816898874")
+            input(type="text" id="surname" name="entry.816898874" required)
             label(for="name") Имя
-            input(type="text" id="name" name="entry.884712139")
+            input(type="text" id="name" name="entry.1525609461" required)
             label(for="date") Дата рождения
-            input(type="date" id="date" name="entry.884712139")
+            input(type="date" id="date" name="entry.884712139" required)
             label(for="link") Ссылка на социальную сеть
-            input(type="text" id="link" name="entry.466567166")
+            input(type="text" id="link" name="entry.466567166" required)
             label(for="phone") Телефон
-            input(type="text" id="phone" name="entry.2015515466")
+            input(type="tel" id="phone" name="entry.2015515466" required)
             label(for="email") Email
-            input(type="text" id="email" name="entry.466567166")
+            input(type="email" id="email" name="entry.17703706" required)
             label(for="size") Размер
-            input(type="text" id="size" name="entry.1235063670")
-
+            select(id="size" name="entry.1235063670")
+              option 3.5
+              option 4
+              option 4.5
+              option 5
+              option 5.5
+              option 6
+              option 6.5
+              option 7
+              option 7.5
+              option 8
+              option 8.5
+              option 9
+              option 9.5
+              option 10
+              option 10.5
+              option 11
+              option 11.5
+              option 12
             .request__checkbox
-              input(type="checkbox" id="agreement" name="entry.17703706")
+              input(type="checkbox" id="agreement" name="entry.1096653634" required)
               label(for="agreement") <a href="megafon.sneakerhead.ru/terms">Оставляя заявку, я подписываю пользовательское соглашение и принимаю условия конфеденциальности</a>
             .request__checkbox
-              input(type="checkbox" id="order" name="entry.1608148304")
+              input(type="checkbox" id="order" name="entry.1608148304" required)
               label(for="order") Оставляя заявку, я соглашаюсь с условиями розыгрыша
             button.request__button( type="submit" )
               +svg("button-text", "320", "20")

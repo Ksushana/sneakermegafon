@@ -1,10 +1,32 @@
 .activate {
-  max-width: 1280px;
-  padding: 130px 30px 67px;
+  max-width: 1060px;
+  padding: 190px 30px 67px;
   margin: 0 auto;
+
+  @include tablet {
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    padding: 55px 10px 11px;
+    font-size: 22px;
+    line-height: 102.3%;
+  }
 
   &__title {
     margin-bottom: 48px;
+
+    @include mobile {
+      margin-bottom: 40px;
+      padding: 0 10px;
+    }
+
+    &--small {
+      @include mobile {
+        margin-bottom: 24px;
+        padding: 0 10px;
+      }
+    }
   }
 
   &__note {
@@ -12,17 +34,49 @@
     line-height: 102.3%;
     color: rgba(17, 17, 17, 0.75);
     margin-bottom: 98px;
+
+    @include mobile {
+      margin-bottom: 48px;
+      font-size: 16px;
+      line-height: 17px;
+    }
   }
 
   &__inner {
     max-width: 952px;
+    &--ul {
+      max-width: 730px;
+
+      @include mobile {
+        .activate__title {
+          padding-left: 0;
+        }
+      }
+    }
   }
 
   &__list {
     counter-reset: item;
     list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include mobile {
+      padding-left: 10px;
+    }
+
+    &--ul {
+      padding-left: 0;
+      margin-bottom: 24px;
+      li {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
 
   }
+
   &__item {
     counter-increment: customlistcounter;
     position: relative;
@@ -31,6 +85,14 @@
     color: rgba(17, 17, 17, 0.75);
     padding-left: 70px;
     padding-bottom: 48px;
+
+    @include mobile {
+      padding-bottom: 24px;
+      font-size: 16px;
+      line-height: 17px;
+      padding-left: 10px;
+    }
+
     &:before {
       content: counter(customlistcounter) " ";
       position: absolute;

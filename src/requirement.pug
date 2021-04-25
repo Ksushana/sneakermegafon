@@ -1,0 +1,49 @@
+include pug/mixins
+
+block variables
+
+doctype html
+html( lang="ru" )
+  head
+    meta( charset="UTF-8" )
+    title #{mainTitle} !{title && "| " + title}
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    link( rel="preload" href="fonts/MenoeGrotesque.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="stylesheet" href="css/style.min.css" )
+
+  body
+    header.header
+      .header__snake
+        +svg("snake-header", "60", "261")
+      .header__inner
+        .header__svg.header__svg--sneaker
+          +svg("sneaker", "370", "50")
+        .header__svg.header__svg--x
+          +svg("cross", "31", "29")
+        .header__svg
+          +svg("megafon", "443", "80")
+
+    main
+      section.activate
+        .activate__inner.activate__inner--ul
+          .activate__title.activate__title--small Условия участия в розыгрыше телефона и&nbsp;условия его использования
+          ul.activate__list.activate__list--ul
+            li.activate__item — Участвовать могут только жители Москвы и&nbsp;Санкт&#8209;Петербурга
+            li.activate__item — Соглашаясь с условиями розыгрыша, вы принимаете их, в случае нарушения условий мы в праве отказать вам в привилегиях данного телефона
+            li.activate__item — Принимая участие в розыгрыше вы соглашаетесь получать информацию о новинках и акциях магазина
+            li.activate__item — Данный телефон не может передаваться другому лицу. Владельцем данного телефона будет являться победитель розыгрыша.
+            li.activate__item — Только владелец телефона может использовать привелегии телефона.
+            li.activate__item Только владелец телефона может участвовать в программе привилегий для владельцев"сникерфона".
+            li.activate__item Владелец может использовать привелегии телефона только после привязки личности к симкарте. (Инструкция megafon.sneakerhead/activate )
+          .activate__title.activate__title--small Программа привилегий «сникерфона»:
+          ul.activate__list.activate__list--ul
+            li.activate__item — Персональная скидка 10% для владельца телефона. (Не распространяется на релизы)
+            li.activate__item — Персональная скидка 15% в честь дня рождения владельца телефона.
+            li.activate__item — Участие в закрытых розыгрышах и закрытых мероприятиях магазина. телефона будет являться победитель розыгрыша.
+            li.activate__item — Участие в закрытых акциях магазина.
+
+
+    footer.footer
+
+    block scripts
+      script( src="js/script.min.js" )

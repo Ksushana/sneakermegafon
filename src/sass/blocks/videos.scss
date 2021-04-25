@@ -3,6 +3,7 @@
   flex-direction: column;
   padding-top: 122px;
   // padding-bottom: 188px;
+  margin-bottom: -100px;
 
   @include mobile {
     padding-top: 70px;

@@ -1,10 +1,8 @@
 .footer {
   min-height: 202px;
   background-color: $color-light-green;
-  margin-top: -100px;
 
   @include mobile {
     min-height: 217px;
-    margin-top: 0;
   }
 }
