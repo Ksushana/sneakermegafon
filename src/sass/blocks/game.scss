@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  background-color: #53B561;
-  // background-image: url(./../img/bg-squares.svg);
+  width: 100%;
+  height: 600px;
+  // background-color: #53B561;
   position: relative;
 
 
@@ -19,9 +19,16 @@
   }
 
   iframe {
-    width: 1000px;
-    height: 600px;
+    position: absolute;
+    width: 92%;
+    margin-left: 4%;
+    height: 100%;
     top: 0;
     left: 0;
+
+    @include mobile {
+      width: 100% !important;
+      margin-left: 0;
+    }
   }
 }

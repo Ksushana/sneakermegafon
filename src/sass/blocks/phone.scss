@@ -35,7 +35,7 @@
   }
 
   @include mobile {
-    margin-top: -240px;
+    margin-top: -295px;
     padding-bottom: 50px;
   }
 
@@ -79,9 +79,25 @@
     }
 
     @include mobile {
-      width: 219px;
-      height: 522px;
-      margin-bottom: 10px;
+      width: 320px;
+      height: auto;
+      margin-bottom: -55px;
+    }
+  }
+
+  &--no-form {
+    margin-top: -637px;
+
+    @include laptop {
+      margin-top: -437px;
+    }
+
+    @include tablet {
+      margin-top: -177px;
+    }
+
+    @include mobile {
+      margin-top: -187px;
     }
   }
 }

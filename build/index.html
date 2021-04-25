@@ -7,6 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="fonts/MenoeGrotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -52,10 +59,16 @@
         </div>
       </div>
     </section>
-    <section class="request">
+    <section class="request request--no-form">
       <div class="request__form">
+        <div class="request__success">
+          <div class="request__success-inner">
+            <div class="request__success-thanks"></div>
+            <div class="request__success-text">Ваша заявка принята</div>
+          </div>
+        </div>
         <h3 class="request__title">Оставь заявку</h3>
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse"><label for="surname">Фамилия</label><input type="text" id="surname" name="entry.816898874" required><label for="name">Имя</label><input type="text" id="name" name="entry.1525609461" required><label for="date">Дата рождения</label><input type="date" id="date" name="entry.884712139" required><label for="link">Ссылка на социальную сеть</label><input type="text" id="link" name="entry.466567166" required><label for="phone">Телефон</label><input type="tel" id="phone" name="entry.2015515466" required><label for="email">Email</label><input type="email" id="email" name="entry.17703706" required><label for="size">Размер</label><select id="size" name="entry.1235063670">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"><label for="surname">Фамилия</label><input type="text" id="surname" name="entry.816898874" required><label for="name">Имя</label><input type="text" id="name" name="entry.1525609461" required><label for="date">Дата рождения</label><input type="date" id="date" name="entry.884712139" required><label for="link">Ссылка на социальную сеть</label><input type="text" id="link" name="entry.466567166" required><label for="phone">Телефон</label><input type="tel" id="phone" name="entry.2015515466" required><label for="email">Email</label><input type="email" id="email" name="entry.17703706" required><label for="size">Размер</label><select id="size" name="entry.1235063670">
             <option>3.5</option>
             <option>4</option>
             <option>4.5</option>
@@ -83,14 +96,14 @@
           <use xlink:href="img/sprite.svg#snake-left"></use>
         </svg></div>
     </section>
-    <section class="phone">
+    <section class="phone phone--no-form">
       <picture>
-        <source media="(min-width: 768px)" srcset="img/phone.png"><img src="img/phone-mob.png" alt="">
+        <source media="(min-width: 768px)" srcset="img/phone@1x.png 1x, img/phone@2x.png 2x"><img src="img/phone-mob@1x.png" srcset="img/phone-mob@2x.png 2x" alt="">
       </picture>
       <p class="phone__text">Это наш телефончик, на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки</p>
       <p class="phone__text phone__text--note">Ожидай смс и мы пришлем тебе информацию.<br> И ты сможешь быть первым, потому что ты с мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.</p>
     </section>
-    <section class="game"><iframe src="https://dev-megafon-snake.mdv.pw" style="width: 70%; height: 70%" frameborder="0"></iframe></section>
+    <section class="game"><iframe src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0"></iframe></section>
     <section class="videos">
       <p class="videos__intro">Тебе наверняка не терпится узнать что нибудь о нашей коллаборации? Мы&nbsp;рассказываем!</p>
       <ul class="videos__list">
@@ -102,6 +115,9 @@
   </main>
   <footer class="footer"></footer>
   <script src="js/script.min.js"></script>
+  <script type="text/javascript">
+    var submitted = false;
+  </script><iframe id="hidden_iframe" name="hidden_iframe" style="display:none;" onload="if(submitted)  {submittedForm()}"></iframe>
 </body>
 
 </html>

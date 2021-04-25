@@ -2,6 +2,8 @@ const timer = document.querySelector(".timeout__timer");
 const title = document.querySelector(".timeout__title");
 const countDownDate = new Date(timer.dataset.time).getTime();
 const countDownDateAfter = new Date(timer.dataset.timeClose).getTime();
+const phone = document.querySelector(".phone");
+const form = document.querySelector(".request");
 
 const x = setInterval(function() {
 
@@ -24,6 +26,15 @@ const x = setInterval(function() {
 
   if (distanceBefore < 0) {
     title.innerHTML = ("РЕГИСТРАЦИЯ ЗАКРОЕТСЯ ЧЕРЕЗ");
+    phone.classList.remove("phone--no-form");
+    form.classList.remove("request--no-form");
+  }
+
+  if (distanceAfter < 0) {
+    title.innerHTML = ("РЕГИСТРАЦИЯ ЗАКРЫТA");
+    timer.style.display = 'none';
+    phone.classList.add("phone--no-form");
+    form.classList.add("request--no-form");
   }
 }, 1000);
 
