@@ -1366,20 +1366,15 @@ a:hover {
   }
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
+input[type="date"] {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAyMCAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDEyTDIwIDBIMEwxMCAxMloiIGZpbGw9IiNCRTlGQzYiLz4KPC9zdmc+Cg==");
-  width: 20px;
-  height: 12px;
-  border-width: thin;
+  background-repeat: no-repeat;
+  background-position: right 50%;
 }
 
 @media (max-width: 767px) {
-  input[type="date"]::-webkit-calendar-picker-indicator {
-    width: 12px;
-    height: 12px;
+  input[type="date"] {
+    background-size: 12px 12px;
   }
 }
 

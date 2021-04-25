@@ -275,18 +275,15 @@
 }
 
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
+input[type="date"] {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAyMCAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDEyTDIwIDBIMEwxMCAxMloiIGZpbGw9IiNCRTlGQzYiLz4KPC9zdmc+Cg==");
-  width: 20px;
-  height: 12px;
-  border-width: thin;
-
+  background-repeat: no-repeat;
+  background-position: right 50%;
   @include mobile {
-    width: 12px;
-    height: 12px;
+    background-size: 12px 12px;
+  }
+  &::-webkit-calendar-picker-indicator {
+  //  opacity: 0;
   }
 }
 
