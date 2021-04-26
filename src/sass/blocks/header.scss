@@ -11,7 +11,7 @@
   &__inner {
     display: grid;
     grid-template-columns: 385px 31px 385px;
-    grid-column-gap: 25px;
+    grid-column-gap: 40px;
     margin: 0 auto;
 
     @include tablet {

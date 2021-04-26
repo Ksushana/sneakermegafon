@@ -1,53 +1,16 @@
 .phone {
   display: flex;
   flex-direction: column;
-  padding-bottom: 142px;
-  margin-top: -337px;
   position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 269px;
-    height: 269px;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -135px;
-    top: 380px;
-
-    background: #00B956;
-    filter: blur(100px);
-
-    @include laptop {
-      top: 250px;
-      width: 240px;
-      height: 240px;
-      margin-left: -120px;
-    }
-
-    @include mobile {
-      display: none;
-    }
-  }
-
-  @include laptop {
-    margin-top: -140px;
-  }
-
-  @include mobile {
-    margin-top: -295px;
-    padding-bottom: 50px;
-  }
-
   &__text {
-    margin: 0 auto 32px;
-    max-width: 955px;
+    margin: 0 auto;
+    max-width: 1024px;
     text-align: center;
     padding: 0 30px;
 
     @include mobile {
-      margin-top: 24px;
-      margin: 24px auto ;
+      margin: 0 auto 110px;
       text-align: left;
       padding: 0 20px;
     }
@@ -60,18 +23,84 @@
       @include mobile {
         font-size: 16px;
         line-height: 18px;
-        margin-top: 0;
+        margin-top: 45px;
+      }
+    }
+  }
+
+  &__snake {
+    position: absolute;
+
+    &--left {
+      left: 0;
+      top: 300px;
+
+      @include tablet {
+        top: unset;
+        bottom: -90px;
+      }
+
+      @include mobile {
+        bottom: 25px;
       }
     }
 
+    &--right {
+      right: 0;
+      top: 200px;
 
+      @include tablet {
+        top: 185px;
+      }
+    }
+
+    &--mob {
+      display: none;
+    }
+
+    @include tablet {
+      &--mob {
+        display: block;
+      }
+
+      &--desktop {
+        display: none;
+      }
+    }
   }
 
   picture {
-    max-width: 1440px;
-    margin: 0 auto 50px;
+    max-width: 981px;
+    margin: -30px auto 0;
     width: 100%;
     z-index: 100;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 269px;
+      height: 269px;
+      border-radius: 50%;
+      left: 50%;
+      margin-left: -135px;
+      top: 35%;
+      z-index: -1;
+
+      background: #00B956;
+      filter: blur(100px);
+
+      @include laptop {
+        top: 250px;
+        width: 240px;
+        height: 240px;
+        margin-left: -120px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
 
     img {
       width: 100%;

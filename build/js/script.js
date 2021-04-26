@@ -27,18 +27,16 @@ const x = setInterval(function() {
   document.getElementById("hours").innerHTML = formatTime(hours);
   document.getElementById("min").innerHTML = formatTime(minutes);
   document.getElementById("sec").innerHTML = formatTime(seconds);
-  title.innerHTML = ("РЕГИСТРАЦИЯ ОТКРОЕТСЯ ЧЕРЕЗ");
+  title.innerHTML = ("Регистрация откроется через");
 
   if (distanceBefore < 0) {
-    title.innerHTML = ("РЕГИСТРАЦИЯ ЗАКРОЕТСЯ ЧЕРЕЗ");
-    phone.classList.remove("phone--no-form");
+    title.innerHTML = ("Регистрация закроется через");
     form.classList.remove("request--no-form");
   }
 
   if (distanceAfter < 0) {
-    title.innerHTML = ("РЕГИСТРАЦИЯ ЗАКРЫТA");
+    title.innerHTML = ("Регистрация закрыта");
     timer.style.display = 'none';
-    phone.classList.add("phone--no-form");
     form.classList.add("request--no-form");
   }
 }, 1000);

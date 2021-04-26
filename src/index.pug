@@ -36,12 +36,12 @@ html( lang="ru" )
             img(src="img/hero-mob@1x.png", srcset="img/hero-mob@2x.png 2x" alt="")
           span 25 апреля 2021
         .hero__text
-         | Совсем скоро вы узнаете как получить эксклюзивный дроп, и&nbsp;мы уверенны что ты сможешь заполучить его, потому что ты вместе с Мегафоном обладаешь самым быстрым интернетом в России.
+         | Жди когда таймер закончиться, и тогда ты сможешь принять участие в розыгрыше эксклюзивного пака сделанного совместно с Мегафоном. Мы уверенны что ты сможешь заполучить его, потому что ты вместе с Мегафоном обладаешь самым быстрым интернетом в России.
         .hero__snake
           +svg("full-snake", "341", "60")
       section.timeout
         h2.timeout__title
-        .timeout__timer(data-time="April 26, 2021 12:00:00" data-time-close="April 26, 2021 23:59:59")
+        .timeout__timer(data-time="April 26, 2021 14:27:00" data-time-close="April 26, 2021 23:59:59")
           .timeout__block
            .timeout__number(id="hours") 03
            .timeout__span Часов
@@ -54,12 +54,13 @@ html( lang="ru" )
            .timeout__number(id="sec") 47
            .timeout__span Секунд
       section.request.request--no-form
+        p.request__intro Оставь заявку на&nbsp;розыгрыш эксклюзивного пака. <br>Внимание! Участие могут принимать только жители Москвы и&nbsp;Санкт-Петербурга.
         .request__form
           .request__success
             .request__success-inner
               .request__success-thanks
               .request__success-text Ваша заявка принята
-          h3.request__title Оставь заявку
+          //- h3.request__title Оставь заявку
           form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;")
             label(for="surname") Фамилия
             input(type="text" id="surname" name="entry.816898874" required)
@@ -98,20 +99,31 @@ html( lang="ru" )
               label(for="agreement") Оставляя заявку, я подписываю <a href="https://sneakerhead.ru/privacy/">пользовательское соглашение и принимаю условия конфеденциальности</a>
             .request__checkbox
               input(type="checkbox" id="order" name="entry.1608148304" required)
-              label(for="order") Оставляя заявку, я соглашаюсь с <a href="/terms.html">условиями розыгрыша</a>
+              label(for="order") Оставляя заявку, я соглашаюсь с <a href="/terms">условиями розыгрыша</a>
             button.request__button( type="submit" )
-        .request__snake
-          +svg("snake-left", "231", "60")
-      section.phone.phone--no-form
+
+      section.game
+        .game__intro Не уходи далеко ожидая новый дроп. Прямо сейчас ты можешь поиграть в&nbsp;змейку и выиграть призы.
+        iframe(src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0")
+      section.phone
+        .phone__snake.phone__snake--left.phone__snake--desktop
+          +svg("snake-phone-left", "395", "220")
+        .phone__snake.phone__snake--left.phone__snake--mob
+          +svg("snake-left-mob", "134", "46")
+        .phone__snake.phone__snake--right.phone__snake--desktop
+          +svg("snake-phone-right", "342", "544")
+        .phone__snake.phone__snake--right.phone__snake--mob
+          +svg("snake-right-mob", "94", "46")
+        p.phone__text Это наш Сникерфон — на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки.
         picture
           source( media="(min-width: 768px)" srcset="img/phone@1x.png 1x, img/phone@2x.png 2x" )
           img(src="img/phone-mob@1x.png" srcset="img/phone-mob@2x.png 2x", alt="")
-        p.phone__text Это наш телефончик, на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки
-        p.phone__text.phone__text--note Ожидай смс и мы пришлем тебе информацию.<br> И ты сможешь быть первым, потому что ты с мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.
-      section.game
-        iframe(src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0")
+        p.phone__text.phone__text--note Когда получишь телефон, обязательно пройди процедуру активации симкарты <br><br>Мы будем писать тебе в WhatsApp. И ты сможешь быть первым, потому что ты с мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.
+
+
       section.videos
-        p.videos__intro Тебе наверняка не терпится узнать что нибудь о нашей коллаборации? Мы&nbsp;рассказываем!
+        p.videos__intro Тебе наверняка не терпится узнать что нибудь о&nbsp;нашей коллаборации?
+        p.videos__intro.videos__intro-note Ты уже знаешь про самый быстрый интернет от Мегафона, а что знаешь про самые быструю доставку? Мы рассказываем включайся:
         ul.videos__list
           //- li.videos__item( style="background-image: url(./img/video2.jpg)")
           //-   a(href="")

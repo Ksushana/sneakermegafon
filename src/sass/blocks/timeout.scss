@@ -1,19 +1,21 @@
 .timeout {
   display: flex;
   flex-direction: column;
-  margin-bottom: 161px;
+  margin-bottom: 100px;
 
   @include mobile {
-    margin-bottom: 75px;
+    margin-bottom: 55px;
   }
 
   &__title {
     font-weight: 500;
-    font-size: 140px;
+    font-size: 120px;
     line-height: 102.3%;
     text-align: center;
     max-width: 924px;
     margin: 0 auto;
+    text-transform: initial;
+    padding: 0 15px;
 
     @include laptop {
       font-size: 110px;
@@ -33,7 +35,7 @@
   &__timer {
     display: flex;
     font-weight: 500;
-    font-size: 140px;
+    font-size: 120px;
     line-height: 102.3%;
     margin: 20px auto ;
 
@@ -53,8 +55,8 @@
   }
 
   &__span {
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 102.3%;
 
     @include mobile {
       font-size: 16px;

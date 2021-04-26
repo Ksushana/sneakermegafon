@@ -37,14 +37,14 @@
           <source media="(min-width: 767px)" srcset="img/hero@1x.png 1x, img/hero@2x.png 2x"><img src="img/hero-mob@1x.png" srcset="img/hero-mob@2x.png 2x" alt="">
         </picture><span>25 апреля 2021</span>
       </div>
-      <div class="hero__text">Совсем скоро вы узнаете как получить эксклюзивный дроп, и&nbsp;мы уверенны что ты сможешь заполучить его, потому что ты вместе с Мегафоном обладаешь самым быстрым интернетом в России.</div>
+      <div class="hero__text">Жди когда таймер закончиться, и тогда ты сможешь принять участие в розыгрыше эксклюзивного пака сделанного совместно с Мегафоном. Мы уверенны что ты сможешь заполучить его, потому что ты вместе с Мегафоном обладаешь самым быстрым интернетом в России.</div>
       <div class="hero__snake"><svg width="341" height="60" aria-hidden="true">
           <use xlink:href="img/sprite.svg#full-snake"></use>
         </svg></div>
     </section>
     <section class="timeout">
       <h2 class="timeout__title"></h2>
-      <div class="timeout__timer" data-time="April 26, 2021 12:00:00" data-time-close="April 26, 2021 23:59:59">
+      <div class="timeout__timer" data-time="April 26, 2021 14:27:00" data-time-close="April 26, 2021 23:59:59">
         <div class="timeout__block">
           <div class="timeout__number" id="hours">03</div>
           <div class="timeout__span">Часов</div>
@@ -60,6 +60,7 @@
       </div>
     </section>
     <section class="request request--no-form">
+      <p class="request__intro">Оставь заявку на&nbsp;розыгрыш эксклюзивного пака. <br>Внимание! Участие могут принимать только жители Москвы и&nbsp;Санкт-Петербурга.</p>
       <div class="request__form">
         <div class="request__success">
           <div class="request__success-inner">
@@ -67,7 +68,6 @@
             <div class="request__success-text">Ваша заявка принята</div>
           </div>
         </div>
-        <h3 class="request__title">Оставь заявку</h3>
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScbYmxVTHet_Xoa97MXmndqhn1a-z7ziZYKAb9xvPwn8d49Mw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"><label for="surname">Фамилия</label><input type="text" id="surname" name="entry.816898874" required><label for="name">Имя</label><input type="text" id="name" name="entry.1525609461" required><label for="date">Дата рождения</label><input type="date" id="date" name="entry.884712139" required placeholder="дд.мм.гггг"><label for="link">Ссылка на социальную сеть</label><input type="text" id="link" name="entry.466567166" required><label for="phone">Телефон</label><input type="tel" id="phone" name="entry.2015515466" required><label for="email">Email</label><input type="email" id="email" name="entry.17703706" required><label for="size">Размер</label><select id="size" name="entry.1235063670">
             <option>3.5</option>
             <option>4</option>
@@ -89,23 +89,35 @@
             <option>12</option>
           </select>
           <div class="request__checkbox"><input type="checkbox" id="agreement" name="entry.1096653634" required><label for="agreement">Оставляя заявку, я подписываю <a href="https://sneakerhead.ru/privacy/">пользовательское соглашение и принимаю условия конфеденциальности</a></label></div>
-          <div class="request__checkbox"><input type="checkbox" id="order" name="entry.1608148304" required><label for="order">Оставляя заявку, я соглашаюсь с <a href="/terms.html">условиями розыгрыша</a></label></div><button class="request__button" type="submit"></button>
+          <div class="request__checkbox"><input type="checkbox" id="order" name="entry.1608148304" required><label for="order">Оставляя заявку, я соглашаюсь с <a href="/terms">условиями розыгрыша</a></label></div><button class="request__button" type="submit"></button>
         </form>
       </div>
-      <div class="request__snake"><svg width="231" height="60" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#snake-left"></use>
-        </svg></div>
     </section>
-    <section class="phone phone--no-form">
+    <section class="game">
+      <div class="game__intro">Не уходи далеко ожидая новый дроп. Прямо сейчас ты можешь поиграть в&nbsp;змейку и выиграть призы.</div><iframe src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0"></iframe>
+    </section>
+    <section class="phone">
+      <div class="phone__snake phone__snake--left phone__snake--desktop"><svg width="395" height="220" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake-phone-left"></use>
+        </svg></div>
+      <div class="phone__snake phone__snake--left phone__snake--mob"><svg width="134" height="46" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake-left-mob"></use>
+        </svg></div>
+      <div class="phone__snake phone__snake--right phone__snake--desktop"><svg width="342" height="544" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake-phone-right"></use>
+        </svg></div>
+      <div class="phone__snake phone__snake--right phone__snake--mob"><svg width="94" height="46" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake-right-mob"></use>
+        </svg></div>
+      <p class="phone__text">Это наш Сникерфон — на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки.</p>
       <picture>
         <source media="(min-width: 768px)" srcset="img/phone@1x.png 1x, img/phone@2x.png 2x"><img src="img/phone-mob@1x.png" srcset="img/phone-mob@2x.png 2x" alt="">
       </picture>
-      <p class="phone__text">Это наш телефончик, на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки</p>
-      <p class="phone__text phone__text--note">Ожидай смс и мы пришлем тебе информацию.<br> И ты сможешь быть первым, потому что ты с мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.</p>
+      <p class="phone__text phone__text--note">Когда получишь телефон, обязательно пройди процедуру активации симкарты <br><br>Мы будем писать тебе в WhatsApp. И ты сможешь быть первым, потому что ты с мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.</p>
     </section>
-    <section class="game"><iframe src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0"></iframe></section>
     <section class="videos">
-      <p class="videos__intro">Тебе наверняка не терпится узнать что нибудь о нашей коллаборации? Мы&nbsp;рассказываем!</p>
+      <p class="videos__intro">Тебе наверняка не терпится узнать что нибудь о&nbsp;нашей коллаборации?</p>
+      <p class="videos__intro videos__intro-note">Ты уже знаешь про самый быстрый интернет от Мегафона, а что знаешь про самые быструю доставку? Мы рассказываем включайся:</p>
       <ul class="videos__list">
         <li class="videos__item videos__item--soon">
           <div class="videos__note">SOON</div>
