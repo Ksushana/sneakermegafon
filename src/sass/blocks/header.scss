@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 6px;
   z-index: 100;
   position: relative;
@@ -8,14 +8,16 @@
   @include mobile {
     padding-top: 50px;
   }
+
   &__inner {
     display: grid;
     grid-template-columns: 385px 31px 385px;
-    grid-column-gap: 40px;
+    grid-column-gap: 60px;
     margin: 0 auto;
 
     @include tablet {
       grid-template-columns: 300px 31px 300px;
+      grid-column-gap: 40px;
     }
 
     @include mobile {
@@ -49,9 +51,9 @@
       }
 
       @include mobile {
-        width: 200px;
-        height: 27px;
-        margin-bottom: 23px;
+        width: 131px;
+        height: 17px;
+        margin-bottom: 5px;
       }
     }
 
@@ -61,9 +63,16 @@
       }
 
       @include mobile {
-        width: 28px;
-        height: 25px;
-        margin-bottom: 23px;
+        width: 17px;
+        height: 17px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &--megafon {
+      @include mobile {
+        width: 183px;
+        height: 32px;
       }
     }
   }
@@ -71,10 +80,15 @@
   &__snake {
     position: absolute;
     top: 0;
-    left: 80px;
+    left: 60px;
 
     @include tablet {
-      display: none;
+      left: 10px;
+      svg {
+        width: 40px;
+        height: 220px;
+      }
+
     }
   }
 }
