@@ -24,7 +24,10 @@
         display: block;
         margin: 0 auto;
         font-size: 14.2px;
-        line-height: 20px;
+        line-height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
       }
 
       &-desk {
@@ -34,6 +37,7 @@
   }
 
   @include mobile {
-    min-height: 217px;
+    min-height: 261px;
+    background-image: url(./../../img/bg-mob.svg);
   }
 }

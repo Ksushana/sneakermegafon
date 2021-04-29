@@ -53,7 +53,7 @@ html( lang="ru" )
            .timeout__number(id="sec") 47
            .timeout__span Секунд
       section.request.request--no-form
-        p.request__intro Оставь заявку на&nbsp;розыгрыш эксклюзивного пака. <br>Внимание! Участие могут принимать только жители Москвы и&nbsp;Санкт-Петербурга.
+        p.request__intro Оставь заявку на&nbsp;розыгрыш эксклюзивного пака. <br>Внимание! Участие могут принимать только жители Москвы и&nbsp;Санкт&#8209;Петербурга.
         .request__form
           .request__success
             .request__success-inner
@@ -102,32 +102,37 @@ html( lang="ru" )
             button.request__button( type="submit" )
 
       section.game
-        .game__intro  Не уходи далеко, ожидая новый дроп.<br> Играй прямо сейчас в змейку и выигрывай:<br> 10% скидку на все от SNKRHD <br>или безлимитный интернет на месяц от МегаФона.
+        .game__intro  Не уходи далеко, ожидая новый дроп.<br><br> Играй прямо сейчас в змейку и выигрывай:<br> 10% скидку на все от SNKRHD <br>или безлимитный интернет на месяц от&nbsp;МегаФона.
         .game__snake
           +svg("snake-game", "496", "123")
-          img(src="./../../img/sneakers-hor.png", alt="", width="178px" height="34px")
+          picture
+            source( media="(min-width: 767px)" srcset="img/sneakers-hor.png", width="178px" height="34px" )
+            img(src="./../img/sneaker-hor-mob.png", alt="", width="38px" height="22px")
 
         iframe(src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0")
       section.phone
-        p.phone__text Это наш совместный пак, он создан с учётом запросов настоящего сникерхеда. В него вошли уникальные кроссовки, сникерфон и безлимитный интернет от МегаФона, для того что бы ты всегда был на связи.
+        p.phone__text Это наш совместный пак, он создан с&nbsp;учётом запросов настоящего сникерхеда. <br><br>В него вошли уникальные кроссовки, сникерфон и&nbsp;безлимитный интернет от МегаФона, для того что бы ты всегда был на связи.
+        .phone__mob-snake.phone__mob-snake--tail
+          +svg("snake-tail", "186", "74")
         .phone__block
           .phone__img-block
             img(src="img/phone@1x.png" srcset="img/phone@2x.png 2x", alt="")
           .phone__text-block
-            h3 Это Сникерфон.
+            h3 Это Сникерфон
             p На него ты будешь первым получать уведомления про наши эксклюзивные дропы, акции и скидки
           .phone__snake-block
             p Мы будем всегда на связи с тобой в What’s App с безлимитом от МегаФона. <br><br>Но для начала пройди активацию sim-карты. Инструкция внутри пака.
               +svg("long-snake","724", "794")
-
+        .phone__mob-snake.phone__mob-snake--head
+          +svg("snake-head", "186", "112")
         .phone__block.phone__block--bottom
           .phone__text-block.phone__text-block--bottom
             h3 Это кроссовки
-            p Мы вручную произвели <br>100 кастомизированных <br>пар для настоящих <br>сникерхедов!
+            p Мы вручную произвели 100 кастомизированных пар для настоящих сникерхедов!
           .img
             img(src="img/sneakers@1x.png" srcset="img/sneakers@2x.png 2x", alt="")
           .phone__snake-block
-            p Тебе очень повезёт обладать такой парой, так как эти кроссовки не выйдут в продажу. <br><br>Будь безлимитно стильным вместе с МегаФоном!
+            p Тебе очень повезёт обладать такой парой, так&nbsp;как эти кроссовки не&nbsp;выйдут в продажу. <br><br>Будь безлимитно стильным вместе с МегаФоном!
       section.videos
         p.videos__intro Тебе наверняка не терпится узнать о нашей коллаборации!
         p.videos__intro.videos__intro-note Ты уже знаешь о безлимитном интернете от МегаФона, а что знаешь о самой быстрой доставке? Мы рассказываем, включайся:

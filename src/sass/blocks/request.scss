@@ -9,6 +9,10 @@
     padding-bottom: 110px;
   }
 
+  @include mobile {
+    padding-bottom: 82px;
+  }
+
   &__intro {
     max-width: 1024px;
     margin: 0 auto 60px;
@@ -24,10 +28,9 @@
     }
 
     @include mobile {
-
-      text-align: left;
       padding: 0 20px;
       margin-bottom: 48px;
+      margin-top: 34px;
     }
   }
 

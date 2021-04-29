@@ -2,29 +2,19 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 
   &__text {
     margin: 0 auto;
     max-width: 1024px;
     text-align: center;
     padding: 0 30px;
+    line-height: 23px;
 
     @include mobile {
-      margin: 0 auto 110px;
-      text-align: left;
       padding: 0 20px;
-    }
-
-    &--note {
-      font-size: 24px;
-      line-height: 102.3%;
-      color: rgba(17, 17, 17, 0.75);
-
-      @include mobile {
-        font-size: 16px;
-        line-height: 18px;
-        margin-top: 45px;
-      }
     }
   }
 
@@ -35,15 +25,72 @@
     @include laptop {
       margin-left: -94px;
     }
+
+    @include tablet {
+      margin-left: 0;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      width: 100vw;
+      margin-left: -17px;
+      margin-top: -15px;
+
+      img {
+        width: 184%;
+      }
+    }
   }
 
   &__snake-block {
     position: absolute;
     right: 17%;
     bottom: -50px;
+    color: rgba(17, 17, 17, 0.75);
 
     @include laptop {
       right: 6%;
+    }
+
+    @include tablet {
+      position: static;
+      margin: 0 auto;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: "";
+        background-image: url("./../img/bg-phone-mob.svg");
+        width: 338px;
+        height: 559px;
+        bottom: -50px;
+        right: -100px;
+        z-index: -1;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      bottom: 0;
+      right: 0;
+      margin-top: -27px;
+      &::after {
+        width: 238px;
+        height: 359px;
+        right: -14px;
+        bottom: -65px;
+      }
     }
 
     p {
@@ -57,6 +104,13 @@
       line-height: 102.3%;
       margin: 0;
       width: 535px;
+
+      @include mobile {
+        width: 100%;
+        padding: 22px 12px;
+        font-size: 16px;
+        line-height: 102.3%;
+      }
     }
 
     svg {
@@ -76,12 +130,23 @@
     position: relative;
     justify-content: space-between;
 
+    @include tablet {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0 30px;
+    }
+
+    @include mobile {
+      padding: 0 17px;
+    }
+
     &--bottom {
       .img {
         margin-left: auto;
         margin-top: 160px;
         margin-right: 120px;
         position: relative;
+
 
         &::after {
           position: absolute;
@@ -93,6 +158,33 @@
           left: -18px;
           bottom: 293px;
           z-index: -2;
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        @include tablet {
+          margin: 100px auto 0;
+
+          img {
+            width: 80%;
+            margin-left: 10%;
+          }
+        }
+
+        @include mobile {
+          margin: 40px auto 0;
+          display: flex;
+          width: 100vw;
+          justify-content: center;
+          margin-left: -17px;
+          overflow: hidden;
+
+          img {
+            width: 125%;
+            margin-left: 0;
+          }
         }
       }
 
@@ -112,6 +204,32 @@
             width: 400px;
           }
         }
+
+        @include tablet {
+          order: -1;
+          bottom: 0;
+          right: 0;
+          margin-top: 76px;
+
+          &:after {
+            position: absolute;
+            content: "";
+            background-image: url("./../img/bg-phone-mob2.svg");
+            width: 238px;
+            height: 476px;
+            top: -37px;
+            z-index: -1;
+            left: -40px;
+          }
+        }
+
+        @include tablet {
+          p {
+            width: 294px;
+            padding: 22px 12px;
+          }
+
+        }
       }
     }
 
@@ -127,12 +245,37 @@
       margin-right: 0;
     }
 
+    @include tablet {
+      transform: translate(0, 0);
+      order: -1;
+      margin-top: 60px;
+    }
+
+    @include mobile {
+      margin-top: 65px;
+    }
+
     &--bottom {
       transform: translate(0, 0);
       margin-left: 120px;
       margin-top: 100px;
       @include laptop {
         transform: translate(-25px, 0);
+      }
+
+      @include tablet {
+        transform: translate(0, 0);
+        margin-left: 0;
+
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      @include mobile {
+        margin-top: 60px;
       }
 
     }
@@ -142,12 +285,41 @@
       line-height: 102.3%;
       margin: 0 0 22px;
       font-family: $font-family2;
+
+      @include mobile {
+        font-size: 22px;
+        line-height: 102.3%;
+      }
     }
 
     p {
       font-size: 24px;
       line-height: 102.3%;
       margin: 0;
+
+      @include mobile {
+        font-size: 22px;
+        line-height: 23px;
+      }
     }
+  }
+
+  &__mob-snake {
+    display: none;
+
+    @include tablet {
+      display: block;
+
+      &--tail {
+        margin-left: auto;
+        margin-top: 58px;
+      }
+
+      &--head {
+        margin-top: 119px;
+      }
+    }
+
+    @include mobile
   }
 }

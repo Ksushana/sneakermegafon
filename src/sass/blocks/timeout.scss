@@ -3,9 +3,16 @@
   flex-direction: column;
   margin-bottom: 100px;
   font-family: $font-family2;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include laptop {
+    max-width: 1000px;
+  }
 
   @include mobile {
-    margin-bottom: 55px;
+    margin-bottom: 80px;
   }
 
   &__title {
@@ -29,7 +36,10 @@
     }
 
     @include mobile {
-      line-height: 102.3%;
+      line-height: 38px;
+      font-size: 26px;
+      padding: 0 10px;
+      margin-bottom: 0;
     }
   }
 
@@ -50,7 +60,7 @@
     }
 
     @include mobile {
-      margin: 25px auto ;
+      margin: 15px auto ;
     }
   }
 

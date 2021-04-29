@@ -25,7 +25,7 @@ const x = setInterval(function() {
   title.innerHTML = ("Сбор заявок через");
 
   if (distanceBefore < 0) {
-    title.innerHTML = ("Регистрация закроется через");
+    title.innerHTML = ("Сбор заявок закончится через");
     form.classList.remove("request--no-form");
   }
 

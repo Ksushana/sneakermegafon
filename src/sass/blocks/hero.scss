@@ -16,8 +16,8 @@
   }
 
   @include mobile {
-    padding-top: 40px;
-    margin-bottom: 50px;
+    padding-top: 30px;
+    margin-bottom: 130px;
   }
 
   &:before {
@@ -41,10 +41,12 @@
     }
 
     @include mobile {
-      width: 40px;
-      height: 62px;
-      left: 10px;
-      bottom: 50px;
+      width: 48px;
+      height: 32px;
+      left: 7px;
+      bottom: unset;
+      top: 430px;
+      background-image: url(./../../img/sneaker-hor-mob.png);
     }
   }
 
@@ -63,13 +65,13 @@
     }
 
     @include mobile {
-      // top: 120px;
+      height: 558px;
     }
   }
 
   &__inner {
     display: flex;
-    max-width: calc(100% - 120px);
+    max-width: 1320px;
     width: 91%;
     justify-content: space-between;
     margin: 0 auto;
@@ -77,6 +79,7 @@
     position: relative;
 
     @include laptop  {
+      max-width: calc(100% - 120px);
       width: 90%;
       margin: 0 auto;
     }
@@ -112,6 +115,7 @@
 
     @include mobile {
       margin-left: 0;
+      margin-top: 45px;
     }
 
     img {
@@ -148,6 +152,7 @@
 
     @include mobile {
       padding-right: 0;
+      padding-left: 60px;
     }
 
     h2 {
@@ -209,18 +214,9 @@
         margin-top: 40px;
         font-size: 16px;
         line-height: 102.3%;
-        padding: 40px 20px 40px 15px;
-        margin-bottom:150px;
+        padding: 40px 20px 50px 15px;
+        margin-bottom:75px;
       }
-    }
-
-    @include mobile {
-      // margin: 0 auto;
-      // text-align: left;
-      // max-width: 100%;
-      // padding: 0;
-      // font-size: 22px;
-      // line-height: 102.3%;
     }
   }
 
@@ -236,53 +232,13 @@
 
     @include mobile {
       bottom: unset;
-      top: 256px;
+      top: 156px;
       left: 10px;
       svg {
-        height: 195px;
-        width: 40px;
+        height: 185px;
+        width: 35px;
       }
 
     }
   }
-
-  // &__logo {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: center;
-  // }
-
-  // &__svg {
-  //   &--mega {
-  //     margin-top: 33px;
-
-  //     @include laptop {
-  //       svg {
-  //         width: 400px;
-  //         height: auto;
-  //       }
-  //     }
-  //   }
-
-  //   &--x {
-  //     margin-top: 15px;
-  //     margin-left: 40px;
-
-  //     @include laptop {
-  //       svg {
-  //         width: 26px;
-  //         height: auto;
-  //       }
-  //     }
-  //   }
-
-  //   &--sneaker {
-  //     @include laptop {
-  //       svg {
-  //         width: 350px;
-  //         height: auto;
-  //       }
-  //     }
-  //   }
-  // }
 }
