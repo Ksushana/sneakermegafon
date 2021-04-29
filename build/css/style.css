@@ -530,6 +530,17 @@ a:hover {
   margin-bottom: 122px;
 }
 
+@media (max-width: 767px) {
+  .hero.small .hero__text-bordered {
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.hero.small:after {
+  height: 300px;
+}
+
 @media (max-width: 1127px) {
   .hero {
     padding-bottom: 0;
@@ -540,7 +551,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero {
-    padding-top: 30px;
+    padding-top: 0;
     margin-bottom: 130px;
   }
 }
@@ -595,7 +606,7 @@ a:hover {
 @media (max-width: 1127px) {
   .hero:after {
     height: 637px;
-    background-image: url(./../../img/bg-mob.svg);
+    background-image: url(./../../img/bg-hero-mob.svg);
   }
 }
 
@@ -652,6 +663,7 @@ a:hover {
   height: 628px;
   position: relative;
   margin: 0;
+  z-index: 1000;
 }
 
 @media (max-width: 1439px) {
@@ -695,7 +707,7 @@ a:hover {
   line-height: 102.3%;
   position: relative;
   z-index: 111;
-  padding-top: 53px;
+  padding-top: 18px;
   padding-left: 114px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -728,10 +740,11 @@ a:hover {
 
 .hero__text h2 {
   font-family: "Press Start 2P", "Arial", sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 48px;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1439px) {
@@ -745,15 +758,56 @@ a:hover {
   .hero__text h2 {
     font-size: 22px;
     line-height: 32px;
-    margin-bottom: 12px;
+    margin-bottom: 0;
     margin-top: 0;
   }
 }
 
 .hero__text-note {
-  font-size: 26px;
-  line-height: 102.3%;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", "Arial", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
   margin: 0;
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__text-note--purple {
+  background-color: #731982;
+  color: #ffffff;
+  padding: 11px 4px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1439px) {
+  .hero__text-note--purple {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero__text-note--purple.hero-mob {
+    font-size: 22px;
+    line-height: 32px;
+    padding: 7px 4px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .hero__text-note {
+    font-size: 26px;
+    line-height: 40px;
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 767px) {
@@ -778,6 +832,8 @@ a:hover {
   line-height: 102.3%;
   bottom: -137px;
   left: -450px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 1439px) {
@@ -826,6 +882,22 @@ a:hover {
   .hero__snake svg {
     height: 185px;
     width: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-desktop {
+    display: none;
+  }
+}
+
+.hero-mob {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hero-mob {
+    display: block;
   }
 }
 
@@ -1964,6 +2036,8 @@ select {
   width: 100%;
   height: 100%;
   display: block;
+  background-position: center;
+  background-size: cover;
 }
 
 .videos__item::after {
@@ -2228,4 +2302,25 @@ select {
     text-align: center;
     margin-bottom: 90px;
   }
+}
+
+.megalink {
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: underline;
+}
+
+.megalink:hover {
+  color: #731982;
+  opacity: 1;
+}
+
+.megalink--green:hover {
+  color: #118744;
+  opacity: 1;
+}
+
+.megalink--noline {
+  text-decoration: none;
 }

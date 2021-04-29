@@ -1,0 +1,22 @@
+.megalink {
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color-purple;
+    opacity: 1;
+  }
+
+  &--green {
+
+    &:hover {
+      color: $color-green;
+      opacity: 1;
+    }
+  }
+
+  &--noline {
+    text-decoration: none;
+  }
+}

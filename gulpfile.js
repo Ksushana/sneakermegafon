@@ -47,7 +47,7 @@ gulp.task("copy", function() {
 
 gulp.task("images", function() {
   return gulp
-    .src(["src/img/**/*.{png,jpg,svg}", "!src/img/sprite/*.svg"])
+    .src(["src/img/**/*.{png,jpg,svg,mp4}", "!src/img/sprite/*.svg"])
     .pipe(newer("build/img"))
     .pipe(
       imagemin([

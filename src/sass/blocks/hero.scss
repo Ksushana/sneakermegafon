@@ -9,6 +9,19 @@
   padding-bottom: 135px;
   margin-bottom: 122px;
 
+  &.small {
+    @include mobile {
+      .hero__text-bordered {
+        max-height: 0;
+        overflow: hidden;
+      }
+    }
+
+    &:after {
+      height: 300px;
+    }
+  }
+
   @include tablet {
     padding-bottom: 0;
     margin-bottom: 80px;
@@ -16,7 +29,7 @@
   }
 
   @include mobile {
-    padding-top: 30px;
+    padding-top: 0;
     margin-bottom: 130px;
   }
 
@@ -61,7 +74,7 @@
 
     @include tablet {
       height: 637px;
-      background-image: url(./../../img/bg-mob.svg);
+      background-image: url(./../../img/bg-hero-mob.svg);
     }
 
     @include mobile {
@@ -101,6 +114,7 @@
     height: 628px;
     position: relative;
     margin: 0;
+    z-index: 1000;
 
     @include laptop {
       width: auto;
@@ -136,7 +150,7 @@
     line-height: 102.3%;
     position: relative;
     z-index: 111;
-    padding-top: 53px;
+    padding-top: 18px;
     padding-left: 114px;
     display: flex;
     flex-direction: column;
@@ -157,10 +171,11 @@
 
     h2 {
       font-family: $font-family2;
-      font-size: 36px;
+      font-size: 32px;
       line-height: 48px;
       font-weight: 400;
-      margin-bottom: 15px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
 
       @include laptop {
         font-size: 30px;
@@ -170,15 +185,47 @@
       @include mobile {
         font-size: 22px;
         line-height: 32px;
-        margin-bottom: 12px;
+        margin-bottom: 0;
         margin-top: 0;
       }
     }
 
     &-note {
-      font-size: 26px;
-      line-height: 102.3%;
+      text-transform: uppercase;
+      font-family: $font-family2;
+      font-size: 32px;
+      line-height: 40px;
       margin: 0;
+      display: inline-block;
+      align-items: center;
+      width: fit-content;
+      justify-content: center;
+
+      &--purple {
+        background-color: $color-purple;
+        color: $color-white;
+        padding: 11px 4px;
+        margin-bottom: 20px;
+
+        @include laptop {
+          margin-bottom: 10px;
+        }
+
+        @include mobile {
+          &.hero-mob {
+            font-size: 22px;
+            line-height: 32px;
+            padding: 7px 4px;
+          }
+
+        }
+      }
+
+      @include laptop {
+        font-size: 26px;
+        line-height: 40px;
+        white-space: nowrap;
+      }
 
       @include mobile {
         font-size: 22px;
@@ -199,6 +246,8 @@
       line-height: 102.3%;
       bottom: -137px;
       left: -450px;
+      opacity: 0;
+      pointer-events: none;
 
       @include laptop {
         left: -350px;
@@ -239,6 +288,19 @@
         width: 35px;
       }
 
+    }
+  }
+
+  &-desktop {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &-mob {
+    display: none;
+    @include mobile {
+      display: block;
     }
   }
 }
