@@ -5,48 +5,7 @@
   padding-bottom: 180px;
   overflow: hidden;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 269px;
-    height: 279px;
-    background: #00B956;
-    filter: blur(80px);
-    left: 27%;
-    top: 369px;
-
-    @include laptop {
-      left: 15%;
-    }
-
-    @include tablet {
-      left: 0;
-    }
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 576px;
-    height: 557px;
-    background: #731982;
-    filter: blur(80px);
-    border-radius: 50%;
-    z-index: -1;
-    top: 326px;
-    right: 21%;
-
-    @include laptop {
-      right: 0;
-    }
-
-    @include tablet {
-      right: -50%;
-      top: 350px;
-    }
-  }
-
-  @include mobile {
+  @include tablet {
     padding-bottom: 110px;
   }
 
@@ -59,9 +18,13 @@
     line-height: 102.3%;
     color: $color-purple;
 
-    @include mobile {
+    @include tablet {
       font-size: 22px;
       line-height: 102.3%;
+    }
+
+    @include mobile {
+
       text-align: left;
       padding: 0 20px;
       margin-bottom: 48px;

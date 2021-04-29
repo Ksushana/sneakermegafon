@@ -1,11 +1,11 @@
 .hero {
   display: flex;
-  min-height: 605px;
+  min-height: 735px;
   font-weight: 500;
   line-height: 102.3%;
   position: relative;
   overflow-x: hidden;
-  padding-top: 70px;
+  padding-top: 25px;
   padding-bottom: 135px;
   margin-bottom: 122px;
 
@@ -26,7 +26,7 @@
     width: 60px;
     height: 93px;
     background-image: url(./../../img/small-sneakers.png);
-    bottom: 131px;
+    bottom: 75px;
     left: 60px;
     z-index: 11111;
     background-position: center;
@@ -34,16 +34,17 @@
     background-repeat: no-repeat;
 
     @include tablet {
-      bottom: unset;
-      top: 310px;
+      bottom: 40px;
+    }
+    @include tablet {
+      left: 20px;
     }
 
     @include mobile {
       width: 40px;
       height: 62px;
-      top: 210px;
-      left: 9px;
-
+      left: 10px;
+      bottom: 50px;
     }
   }
 
@@ -51,156 +52,77 @@
     position: absolute;
     content: "";
     width: 100%;
-    height: 420px;
+    height: 362px;
     background-image: url(./../../img/bg-squares.svg);
     background-color: #53B561;
     bottom: 0;
 
     @include tablet {
-      height: 199px;
-      bottom: unset;
-      top: 300px;
+      height: 637px;
       background-image: url(./../../img/bg-mob.svg);
     }
 
     @include mobile {
-      top: 120px;
+      // top: 120px;
     }
   }
 
   &__inner {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 43px;
-    max-width: 1000px;
+    display: flex;
+    max-width: calc(100% - 120px);
+    width: 91%;
+    justify-content: space-between;
     margin: 0 auto;
     z-index: 10000;
     position: relative;
 
-    @include tablet {
+    @include laptop  {
       width: 90%;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column-reverse;
-      grid-gap: 60px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     @include mobile {
+      max-width: calc( 100% - 24px);
       width: calc( 100% - 24px);
       margin-left: 12px;
     }
-
-    // &::after {
-    //   position: absolute;
-    //   content: "";
-    //   width: 430px;
-    //   height: 430px;
-    //   background: #00B956;
-    //   border-radius: 50%;
-    //   filter: blur(90px);
-    //   left: 280px;
-    //   top: -57px;
-    //   z-index: -1;
-
-    //   @include tablet {
-    //     width: 330px;
-    //     height: 330px;
-    //   }
-
-    //   @include mobile {
-    //     width: 119px;
-    //     height: 119px;
-    //     right: -60px;
-    //     top: 360px;
-    //     filter: blur(40px);
-    //   }
-    // }
-
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    //   width: 430px;
-    //   height: 430px;
-    //   background: #731982;
-    //   border-radius: 50%;
-    //   filter: blur(90px);
-    //   top: 250px;
-    //   z-index: 10000;
-    //   left: -60px;
-    //   z-index: -1;
-
-    //   @include tablet {
-    //     width: 330px;
-    //     height: 330px;
-
-    //   }
-
-    //   @include mobile {
-    //     width: 119px;
-    //     height: 119px;
-    //     top: 360px;
-    //     left: -60px;
-    //     filter: blur(40px);
-    //   }
-    // }
   }
 
-
-
   &__img {
-    width: 635px;
-    height: 635px;
+    width: 628px;
+    height: 628px;
     position: relative;
-    margin: auto 0 auto 100px;
+    margin: 0;
 
     @include laptop {
-      margin: auto;
+      width: auto;
+      height: auto;
+      margin-top: 100px;
     }
 
     @include tablet {
-      width: 352px;
-      height: 352px;
-      margin-top: 0;
-      margin-left: auto;
-      margin-right: 100px;
+      margin-left: 60px;
+      margin-top: 34px;
     }
 
     @include mobile {
-      width: 238px;
-      height: 238px;
-      margin-right: 0;
+      margin-left: 0;
     }
 
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: contain;
 
-
-    }
-
-    span {
-      position: absolute;
-      color: $color-purple;
-      width: 173px;
-      right: -155px;
-      top: 290px;
-
-      @include laptop {
-        right: -100px;
-        top: 80px;
-        font-size: 24px;
-      }
-
       @include mobile {
-        position: static;
-        font-size: 22px;
-        line-height: 102.3%;
-        width: 44%;
-        display: block;
-        margin-top: 25px;
-        margin-left: auto;
+        margin-left: 60px;
+        width: calc(100% - 60px);
+
       }
     }
   }
@@ -208,102 +130,159 @@
   &__text {
     font-size: 22px;
     line-height: 102.3%;
-    padding: 0;
     position: relative;
     z-index: 111;
+    padding-top: 53px;
+    padding-left: 114px;
+    display: flex;
+    flex-direction: column;
 
-    p {
+    @include laptop {
+      padding-left: 40px;
+      padding-right: 20px;
+    }
+
+    @include tablet {
+      padding-top: 0;
+    }
+
+    @include mobile {
+      padding-right: 0;
+    }
+
+    h2 {
+      font-family: $font-family2;
+      font-size: 36px;
+      line-height: 48px;
+      font-weight: 400;
+      margin-bottom: 15px;
+
+      @include laptop {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @include mobile {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 12px;
+        margin-top: 0;
+      }
+    }
+
+    &-note {
+      font-size: 26px;
+      line-height: 102.3%;
+      margin: 0;
+
+      @include mobile {
+        font-size: 22px;
+        line-height: 102.3%;
+      }
+    }
+
+    &-bordered {
       position: absolute;
       background: #FFFFFF;
       border: 8px solid #6A247D;
       box-sizing: border-box;
       box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
-      width: 518px;
-      padding: 48px 30px;
-      left: -50px;
-      top: -120px;
+      width: 542px;
+      padding: 40px 25px;
+      bottom: 0;
+      font-size: 22px;
+      line-height: 102.3%;
+      bottom: -137px;
+      left: -450px;
 
       @include laptop {
-        left: 40px;
-
+        left: -350px;
       }
 
       @include tablet {
         position: static;
-        border: none;
-        box-shadow: none;
+        margin-bottom: 50px;
         width: 100%;
       }
 
       @include mobile {
-        padding: 0 5px;
-        margin-top: 0;
+        margin-top: 40px;
+        font-size: 16px;
+        line-height: 102.3%;
+        padding: 40px 20px 40px 15px;
+        margin-bottom:150px;
       }
     }
 
     @include mobile {
-      margin: 0 auto;
-      text-align: left;
-      max-width: 100%;
-      padding: 0;
-      font-size: 22px;
-      line-height: 102.3%;
+      // margin: 0 auto;
+      // text-align: left;
+      // max-width: 100%;
+      // padding: 0;
+      // font-size: 22px;
+      // line-height: 102.3%;
     }
   }
 
   &__snake {
     position: absolute;
-    top: 0;
-    left: 62px;
+    bottom: 220px;
+    left: 58px;
+    z-index: 1;
+
+    @include tablet {
+      left: 20px;
+    }
 
     @include mobile {
-
+      bottom: unset;
+      top: 256px;
+      left: 10px;
       svg {
-        width: 260px;
-        height: 45px;
+        height: 195px;
+        width: 40px;
       }
-      padding-top: 60px;
-      padding-bottom: 80px;
+
     }
   }
 
-  &__logo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  // &__logo {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  // }
 
-  &__svg {
-    &--mega {
-      margin-top: 33px;
+  // &__svg {
+  //   &--mega {
+  //     margin-top: 33px;
 
-      @include laptop {
-        svg {
-          width: 400px;
-          height: auto;
-        }
-      }
-    }
+  //     @include laptop {
+  //       svg {
+  //         width: 400px;
+  //         height: auto;
+  //       }
+  //     }
+  //   }
 
-    &--x {
-      margin-top: 15px;
-      margin-left: 40px;
+  //   &--x {
+  //     margin-top: 15px;
+  //     margin-left: 40px;
 
-      @include laptop {
-        svg {
-          width: 26px;
-          height: auto;
-        }
-      }
-    }
+  //     @include laptop {
+  //       svg {
+  //         width: 26px;
+  //         height: auto;
+  //       }
+  //     }
+  //   }
 
-    &--sneaker {
-      @include laptop {
-        svg {
-          width: 350px;
-          height: auto;
-        }
-      }
-    }
-  }
+  //   &--sneaker {
+  //     @include laptop {
+  //       svg {
+  //         width: 350px;
+  //         height: auto;
+  //       }
+  //     }
+  //   }
+  // }
 }

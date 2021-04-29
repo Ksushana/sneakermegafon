@@ -8,7 +8,8 @@ html( lang="ru" )
     meta( charset="UTF-8" )
     title Megafon x Sneakerhead
     meta( name="viewport" content="width=device-width, initial-scale=1.0" )
-    link( rel="preload" href="fonts/MenoeGrotesque.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/PressStart2P.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/RobotoMono.woff2" as="font" type="font/woff2" crossorigin )
     link( rel="stylesheet" href="css/style.min.css" )
     link(rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png')
     link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
@@ -20,28 +21,26 @@ html( lang="ru" )
 
   body
     header.header
-      .header__snake
-          +svg("snake-top", "60", "236")
-      .header__inner
-        .header__svg.header__svg--sneaker
-          +svg("sneaker", "321", "43")
-        .header__svg.header__svg--x
-          +svg("cross", "29", "31")
-        .header__svg.header__svg--megafon
-          +svg("megafon", "385", "70")
+      .header__logo.header__logo-desk SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X
+      .header__logo.header__logo-mob SNEAKERHEAD X MEGAFON
 
     main
       section.hero
+        .hero__snake
+          +svg("snake-header", "66", "376")
         .hero__inner
           .hero__text
-            p Жди, когда таймер закончится, и&nbsp;тогда ты сможешь принять участие в розыгрыше эксклюзивного пака, сделанного совместно с&nbsp;МегаФоном. Мы уверены, что ты сможешь заполучить его,потому что обладаешь безлимитом от МегаФона
+
+            h2 ДРОП<br>С БЕЗЛИМИТОМ,
+            p.hero__text-note Потому что ты первый в тренде
+
+
           .hero__img
-            picture
-              source( media="(min-width: 767px)" srcset="img/hero@1x.jpg 1x, img/hero@2x.jpg 2x" )
-              img(src="img/hero@1x.jpg 1x", srcset="img/hero@2x.jpg 2x" alt="")
+            img(src="img/hero@1x.jpg 1x", srcset="img/hero@2x.jpg 2x" alt="")
+            p.hero__text-bordered Жди окончания таймера и скорее заполняй заявку, чтобы поучаствовать в розыгрыше эксклюзивного пака by Sneakerhead х MegaFon. <br><br>Дропы с безлимитом пройдут с 30.04 по 03.05 только на этом лендинге. Следи за таймером, ведь на сбор заявок отведено очень мало времени.<br><br>Удачи!
       section.timeout
         h2.timeout__title
-        .timeout__timer(data-time="April 30, 2021 12:00:00" data-time-close="April 30, 2021 23:59:59")
+        .timeout__timer(data-time="April 28, 2021 12:00:00" data-time-close="April 30, 2021 23:59:59")
           .timeout__block
            .timeout__number(id="hours") 03
            .timeout__span Часов
@@ -103,37 +102,41 @@ html( lang="ru" )
             button.request__button( type="submit" )
 
       section.game
-        .game__intro Не уходи далеко ожидая новый дроп. Прямо сейчас ты можешь поиграть в&nbsp;змейку и выиграть призы.
+        .game__intro  Не уходи далеко, ожидая новый дроп.<br> Играй прямо сейчас в змейку и выигрывай:<br> 10% скидку на все от SNKRHD <br>или безлимитный интернет на месяц от МегаФона.
+        .game__snake
+          +svg("snake-game", "496", "123")
+          img(src="./../../img/sneakers-hor.png", alt="", width="178px" height="34px")
+
         iframe(src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0")
       section.phone
-        .phone__snake.phone__snake--left.phone__snake--desktop
-          +svg("snake-phone-left", "395", "220")
-        .phone__snake.phone__snake--left.phone__snake--mob
-          +svg("snake-left-mob", "134", "46")
-        .phone__snake.phone__snake--right.phone__snake--desktop
-          +svg("snake-phone-right", "342", "544")
-        .phone__snake.phone__snake--right.phone__snake--mob
-          +svg("snake-right-mob", "94", "46")
-        p.phone__text Это наш Сникерфон — на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки.
-        picture
-          source( media="(min-width: 768px)" srcset="img/phone@1x.png 1x, img/phone@2x.png 2x" )
-          img(src="img/phone-mob@1x.png" srcset="img/phone-mob@2x.png 2x", alt="")
-        p.phone__text.phone__text--note Когда получишь телефон, обязательно пройди процедуру активации симкарты <br><br>Мы будем писать тебе в WhatsApp. И ты сможешь быть первым, потому что ты с Мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.
+        p.phone__text Это наш совместный пак, он создан с учётом запросов настоящего сникерхеда. В него вошли уникальные кроссовки, сникерфон и безлимитный интернет от МегаФона, для того что бы ты всегда был на связи.
+        .phone__block
+          .phone__img-block
+            img(src="img/phone@1x.png" srcset="img/phone@2x.png 2x", alt="")
+          .phone__text-block
+            h3 Это Сникерфон.
+            p На него ты будешь первым получать уведомления про наши эксклюзивные дропы, акции и скидки
+          .phone__snake-block
+            p Мы будем всегда на связи с тобой в What’s App с безлимитом от МегаФона. <br><br>Но для начала пройди активацию sim-карты. Инструкция внутри пака.
+              +svg("long-snake","724", "794")
 
-
+        .phone__block.phone__block--bottom
+          .phone__text-block.phone__text-block--bottom
+            h3 Это кроссовки
+            p Мы вручную произвели <br>100 кастомизированных <br>пар для настоящих <br>сникерхедов!
+          .img
+            img(src="img/sneakers@1x.png" srcset="img/sneakers@2x.png 2x", alt="")
+          .phone__snake-block
+            p Тебе очень повезёт обладать такой парой, так как эти кроссовки не выйдут в продажу. <br><br>Будь безлимитно стильным вместе с МегаФоном!
       section.videos
-        p.videos__intro Тебе наверняка не терпится узнать что нибудь о&nbsp;нашей коллаборации?
-        p.videos__intro.videos__intro-note Ты уже знаешь про самый быстрый интернет от Мегафона, а что знаешь про самые быструю доставку? Мы рассказываем включайся:
+        p.videos__intro Тебе наверняка не терпится узнать о нашей коллаборации!
+        p.videos__intro.videos__intro-note Ты уже знаешь о безлимитном интернете от МегаФона, а что знаешь о самой быстрой доставке? Мы рассказываем, включайся:
         ul.videos__list
-          //- li.videos__item( style="background-image: url(./img/video2.jpg)")
-          //-   a(href="")
-          //- li.videos__item( style="background-image: url(./img/video1.jpg)")
-          //-   a(href="")
-          //- li.videos__item( style="background-image: url(./img/video3.jpg)")
-          //-   a(href="")
           li.videos__item.videos__item--soon
             .videos__note SOON
     footer.footer
+      .footer__logo.footer__logo-desk SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X
+      .footer__logo.footer__logo-mob SNEAKERHEAD X MEGAFON
 
     block scripts
       script( src="js/script.min.js" )

@@ -1,6 +1,37 @@
 .footer {
-  min-height: 202px;
+  min-height: 320px;
   background-color: $color-light-green;
+  background-image: url(./../../img/bg-squares.svg);
+  display: flex;
+  align-items: flex-end;
+
+  &__logo {
+    font-family: $font-family2;
+
+    color: $color-purple;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20.8px;
+    line-height: 141px;
+    background-color: $color-white;
+
+    &-mob {
+      display: none;
+    }
+
+    @include mobile {
+      &-mob {
+        display: block;
+        margin: 0 auto;
+        font-size: 14.2px;
+        line-height: 20px;
+      }
+
+      &-desk {
+        display: none;
+      }
+    }
+  }
 
   @include mobile {
     min-height: 217px;

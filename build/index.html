@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <title>Megafon x Sneakerhead</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="fonts/MenoeGrotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PressStart2P.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/RobotoMono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,37 +19,27 @@
 
 <body>
   <header class="header">
-    <div class="header__snake"><svg width="60" height="236" aria-hidden="true">
-        <use xlink:href="img/sprite.svg#snake-top"></use>
-      </svg></div>
-    <div class="header__inner">
-      <div class="header__svg header__svg--sneaker"><svg width="321" height="43" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#sneaker"></use>
-        </svg></div>
-      <div class="header__svg header__svg--x"><svg width="29" height="31" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#cross"></use>
-        </svg></div>
-      <div class="header__svg header__svg--megafon"><svg width="385" height="70" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#megafon"></use>
-        </svg></div>
-    </div>
+    <div class="header__logo header__logo-desk">SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X</div>
+    <div class="header__logo header__logo-mob">SNEAKERHEAD X MEGAFON</div>
   </header>
   <main>
     <section class="hero">
+      <div class="hero__snake"><svg width="66" height="376" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake-header"></use>
+        </svg></div>
       <div class="hero__inner">
         <div class="hero__text">
-          <p>Жди, когда таймер закончится, и&nbsp;тогда ты сможешь принять участие в розыгрыше эксклюзивного пака, сделанного совместно с&nbsp;МегаФоном. Мы уверены, что ты сможешь заполучить его,потому что обладаешь безлимитом от МегаФона</p>
+          <h2>ДРОП<br>С БЕЗЛИМИТОМ,</h2>
+          <p class="hero__text-note">Потому что ты первый в тренде</p>
         </div>
-        <div class="hero__img">
-          <picture>
-            <source media="(min-width: 767px)" srcset="img/hero@1x.jpg 1x, img/hero@2x.jpg 2x"><img src="img/hero@1x.jpg 1x" srcset="img/hero@2x.jpg 2x" alt="">
-          </picture>
+        <div class="hero__img"><img src="img/hero@1x.jpg 1x" srcset="img/hero@2x.jpg 2x" alt="">
+          <p class="hero__text-bordered">Жди окончания таймера и скорее заполняй заявку, чтобы поучаствовать в розыгрыше эксклюзивного пака by Sneakerhead х MegaFon. <br><br>Дропы с безлимитом пройдут с 30.04 по 03.05 только на этом лендинге. Следи за таймером, ведь на сбор заявок отведено очень мало времени.<br><br>Удачи!</p>
         </div>
       </div>
     </section>
     <section class="timeout">
       <h2 class="timeout__title"></h2>
-      <div class="timeout__timer" data-time="April 30, 2021 12:00:00" data-time-close="April 30, 2021 23:59:59">
+      <div class="timeout__timer" data-time="April 28, 2021 12:00:00" data-time-close="April 30, 2021 23:59:59">
         <div class="timeout__block">
           <div class="timeout__number" id="hours">03</div>
           <div class="timeout__span">Часов</div>
@@ -98,30 +89,39 @@
       </div>
     </section>
     <section class="game">
-      <div class="game__intro">Не уходи далеко ожидая новый дроп. Прямо сейчас ты можешь поиграть в&nbsp;змейку и выиграть призы.</div><iframe src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0"></iframe>
+      <div class="game__intro"> Не уходи далеко, ожидая новый дроп.<br> Играй прямо сейчас в змейку и выигрывай:<br> 10% скидку на все от SNKRHD <br>или безлимитный интернет на месяц от МегаФона.</div>
+      <div class="game__snake"><svg width="496" height="123" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#snake-game"></use>
+        </svg><img src="./../../img/sneakers-hor.png" alt="" width="178px" height="34px"></div><iframe src="https://dev-megafon-snake.mdv.pw" style="width: 92%; height: 100%" frameborder="0"></iframe>
     </section>
     <section class="phone">
-      <div class="phone__snake phone__snake--left phone__snake--desktop"><svg width="395" height="220" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#snake-phone-left"></use>
-        </svg></div>
-      <div class="phone__snake phone__snake--left phone__snake--mob"><svg width="134" height="46" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#snake-left-mob"></use>
-        </svg></div>
-      <div class="phone__snake phone__snake--right phone__snake--desktop"><svg width="342" height="544" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#snake-phone-right"></use>
-        </svg></div>
-      <div class="phone__snake phone__snake--right phone__snake--mob"><svg width="94" height="46" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#snake-right-mob"></use>
-        </svg></div>
-      <p class="phone__text">Это наш Сникерфон — на него ты будешь получать эксклюзивные уведомления про наши дропы, акции и&nbsp;скидки.</p>
-      <picture>
-        <source media="(min-width: 768px)" srcset="img/phone@1x.png 1x, img/phone@2x.png 2x"><img src="img/phone-mob@1x.png" srcset="img/phone-mob@2x.png 2x" alt="">
-      </picture>
-      <p class="phone__text phone__text--note">Когда получишь телефон, обязательно пройди процедуру активации симкарты <br><br>Мы будем писать тебе в WhatsApp. И ты сможешь быть первым, потому что ты с Мегафоном будешь обладать самым быстрым интернетом и самой актуальной информацией.</p>
+      <p class="phone__text">Это наш совместный пак, он создан с учётом запросов настоящего сникерхеда. В него вошли уникальные кроссовки, сникерфон и безлимитный интернет от МегаФона, для того что бы ты всегда был на связи.</p>
+      <div class="phone__block">
+        <div class="phone__img-block"><img src="img/phone@1x.png" srcset="img/phone@2x.png 2x" alt=""></div>
+        <div class="phone__text-block">
+          <h3>Это Сникерфон.</h3>
+          <p>На него ты будешь первым получать уведомления про наши эксклюзивные дропы, акции и скидки</p>
+        </div>
+        <div class="phone__snake-block">
+          <p>Мы будем всегда на связи с тобой в What’s App с безлимитом от МегаФона. <br><br>Но для начала пройди активацию sim-карты. Инструкция внутри пака.<svg width="724" height="794" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#long-snake"></use>
+            </svg></p>
+        </div>
+      </div>
+      <div class="phone__block phone__block--bottom">
+        <div class="phone__text-block phone__text-block--bottom">
+          <h3>Это кроссовки</h3>
+          <p>Мы вручную произвели <br>100 кастомизированных <br>пар для настоящих <br>сникерхедов!</p>
+        </div>
+        <div class="img"><img src="img/sneakers@1x.png" srcset="img/sneakers@2x.png 2x" alt=""></div>
+        <div class="phone__snake-block">
+          <p>Тебе очень повезёт обладать такой парой, так как эти кроссовки не выйдут в продажу. <br><br>Будь безлимитно стильным вместе с МегаФоном!</p>
+        </div>
+      </div>
     </section>
     <section class="videos">
-      <p class="videos__intro">Тебе наверняка не терпится узнать что нибудь о&nbsp;нашей коллаборации?</p>
-      <p class="videos__intro videos__intro-note">Ты уже знаешь про самый быстрый интернет от Мегафона, а что знаешь про самые быструю доставку? Мы рассказываем включайся:</p>
+      <p class="videos__intro">Тебе наверняка не терпится узнать о нашей коллаборации!</p>
+      <p class="videos__intro videos__intro-note">Ты уже знаешь о безлимитном интернете от МегаФона, а что знаешь о самой быстрой доставке? Мы рассказываем, включайся:</p>
       <ul class="videos__list">
         <li class="videos__item videos__item--soon">
           <div class="videos__note">SOON</div>
@@ -129,7 +129,10 @@
       </ul>
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer__logo footer__logo-desk">SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X SNEAKERHEAD X MEGAFON X</div>
+    <div class="footer__logo footer__logo-mob">SNEAKERHEAD X MEGAFON</div>
+  </footer>
   <script src="js/script.min.js"></script>
   <script type="text/javascript">
     var submitted = false;

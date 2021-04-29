@@ -1,94 +1,38 @@
 .header {
   display: flex;
-  padding-top: 40px;
-  padding-bottom: 6px;
+  padding-top: 63px;
+  padding-bottom: 20px;
   z-index: 100;
   position: relative;
+  overflow: hidden;
 
   @include mobile {
-    padding-top: 50px;
+    padding-top: 20px;
   }
 
-  &__inner {
-    display: grid;
-    grid-template-columns: 385px 31px 385px;
-    grid-column-gap: 60px;
-    margin: 0 auto;
+  &__logo {
+    font-family: $font-family2;
+    color: $color-purple;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20.8px;
+    line-height: 48px;
 
-    @include tablet {
-      grid-template-columns: 300px 31px 300px;
-      grid-column-gap: 40px;
+    &-mob {
+      display: none;
     }
 
     @include mobile {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  &__svg {
-    align-self: center;
-
-    @include tablet {
-      height: 50px;
-
-      svg {
-        height: 100%;
-        width: auto;
-      }
-    }
-
-    @include mobile {
-      width: 280px;
-      height: 51px;
-
-    }
-    &--sneaker {
-      text-align: right;
-
-      @include tablet {
-        height: 35px;
+      &-mob {
+        display: block;
+        margin: 0 auto;
+        font-size: 14.2px;
+        line-height: 20px;
       }
 
-      @include mobile {
-        width: 131px;
-        height: 17px;
-        margin-bottom: 5px;
+      &-desk {
+        display: none;
       }
-    }
-
-    &--x {
-      @include tablet {
-        height: 25px;
-      }
-
-      @include mobile {
-        width: 17px;
-        height: 17px;
-        margin-bottom: 10px;
-      }
-    }
-
-    &--megafon {
-      @include mobile {
-        width: 183px;
-        height: 32px;
-      }
-    }
-  }
-
-  &__snake {
-    position: absolute;
-    top: 0;
-    left: 60px;
-
-    @include tablet {
-      left: 10px;
-      svg {
-        width: 40px;
-        height: 220px;
-      }
-
     }
   }
 }

@@ -27,7 +27,7 @@ const x = setInterval(function() {
   document.getElementById("hours").innerHTML = formatTime(hours);
   document.getElementById("min").innerHTML = formatTime(minutes);
   document.getElementById("sec").innerHTML = formatTime(seconds);
-  title.innerHTML = ("Регистрация откроется через");
+  title.innerHTML = ("Сбор заявок через");
 
   if (distanceBefore < 0) {
     title.innerHTML = ("Регистрация закроется через");
