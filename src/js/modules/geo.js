@@ -22,7 +22,7 @@ links.forEach(link => {
           return deg * (Math.PI/180)
         }
 
-        if (getDistanceFromLatLonInKm(59, 30, position.coords.latitude, position.coords.longitude) < 50) {
+        if (getDistanceFromLatLonInKm(59.57, 30.19, position.coords.latitude, position.coords.longitude) < 150) {
           link.setAttribute("href", "https://spb.megafon.ru/tariffs/all/bez_pereplat_internet.html");
         }
       }
