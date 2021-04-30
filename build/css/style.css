@@ -2047,6 +2047,10 @@ select {
   background-size: cover;
 }
 
+.videos__item a:hover {
+  opacity: 1;
+}
+
 .videos__item::after {
   position: absolute;
   content: "";
