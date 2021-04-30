@@ -33,6 +33,7 @@
       img {
         width: 100%;
         height: auto;
+        object-fit: contain;
       }
     }
 
@@ -146,6 +147,10 @@
         margin-top: 160px;
         margin-right: 120px;
         position: relative;
+
+        img {
+          object-fit: contain;
+        }
 
 
         &::after {

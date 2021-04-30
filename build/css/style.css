@@ -1085,6 +1085,8 @@ a:hover {
   .phone__img-block img {
     width: 100%;
     height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
@@ -1226,6 +1228,11 @@ a:hover {
   margin-top: 160px;
   margin-right: 120px;
   position: relative;
+}
+
+.phone__block--bottom .img img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .phone__block--bottom .img::after {
