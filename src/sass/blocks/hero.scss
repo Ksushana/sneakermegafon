@@ -166,7 +166,7 @@
 
     @include mobile {
       padding-right: 0;
-      padding-left: 60px;
+      padding-left: 30px;
     }
 
     h2 {
@@ -212,12 +212,9 @@
         }
 
         @include mobile {
-          &.hero-mob {
-            font-size: 22px;
-            line-height: 32px;
-            padding: 7px 4px;
-          }
-
+          font-size: 18px;
+          line-height: 32px;
+          padding: 7px 4px;
         }
       }
 
@@ -228,7 +225,7 @@
       }
 
       @include mobile {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 102.3%;
       }
     }

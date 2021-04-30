@@ -734,7 +734,7 @@ a:hover {
 @media (max-width: 767px) {
   .hero__text {
     padding-right: 0;
-    padding-left: 60px;
+    padding-left: 30px;
   }
 }
 
@@ -795,8 +795,8 @@ a:hover {
 }
 
 @media (max-width: 767px) {
-  .hero__text-note--purple.hero-mob {
-    font-size: 22px;
+  .hero__text-note--purple {
+    font-size: 18px;
     line-height: 32px;
     padding: 7px 4px;
   }
@@ -812,7 +812,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero__text-note {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 102.3%;
   }
 }
