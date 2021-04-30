@@ -56,7 +56,7 @@
     @include mobile {
       display: flex;
       flex-direction: column;
-      grid-gap: 48px;
+      gap: 0;
     }
   }
 
@@ -74,7 +74,8 @@
 
     @include mobile {
       width: 280px;
-    height: 250px;
+      height: 250px;
+      margin-bottom: 48px;
     }
 
     a {
