@@ -2004,6 +2004,15 @@ select {
   gap: 40px;
 }
 
+@media (max-width: 1439px) {
+  .videos__list {
+    padding: 48px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media (max-width: 767px) {
   .videos__list {
     display: -webkit-box;
@@ -2025,11 +2034,8 @@ select {
           box-sizing: border-box;
   -webkit-box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
-  background-size: cover;
-  background-position: center;
-  background-size: 101%;
   position: relative;
-  background-color: #ffffff;
+  background-color: #00B956;
 }
 
 @media (max-width: 767px) {
@@ -2046,6 +2052,8 @@ select {
   display: block;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #00B956;
 }
 
 .videos__item a:hover {

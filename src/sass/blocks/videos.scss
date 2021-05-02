@@ -48,6 +48,8 @@
     gap: 40px;
 
     @include laptop {
+      padding: 48px;
+      justify-content: center;
     }
 
     @include tablet {
@@ -66,11 +68,8 @@
     border: 8px solid #6A247D;
     box-sizing: border-box;
     box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
-    background-size: cover;
-    background-position: center;
-    background-size: 101%;
     position: relative;
-    background-color: $color-white;
+    background-color: $color-light-green;
 
     @include mobile {
       width: 280px;
@@ -84,6 +83,8 @@
       display: block;
       background-position: center;
       background-size: cover;
+      background-repeat: no-repeat;
+      background-color: $color-light-green;
       &:hover {
        opacity: 1;
       }
